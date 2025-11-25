@@ -63,12 +63,12 @@
       <ul class="navbar-nav ms-auto align-items-lg-center">
         <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house-door me-1"></i>Home</a></li>
         <li class="nav-item"><a class="nav-link" href="program.html"><i class="bi bi-journal-text me-1"></i>Programs</a></li>
-        <li class="nav-item"><a class="nav-link" href="#events"><i class="bi bi-calendar-event me-1"></i>Events</a></li>
-        <li class="nav-item"><a class="nav-link" href="#blog"><i class="bi bi-newspaper me-1"></i>Blog</a></li>
-        <li class="nav-item"><a class="nav-link" href="#about"><i class="bi bi-info-circle me-1"></i>About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact"><i class="bi bi-envelope me-1"></i>Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="event.html"><i class="bi bi-calendar-event me-1"></i>Events</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog.html"><i class="bi bi-newspaper me-1"></i>Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html"><i class="bi bi-info-circle me-1"></i>About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html"><i class="bi bi-envelope me-1"></i>Contact</a></li>
         <li class="nav-item ms-lg-3">
-          <a class="btn btn-warning text-dark fw-bold" href="#donate"><i class="bi bi-envelope me-1"></i>Donate</a>
+          <a class="btn btn-warning text-dark fw-bold" href="donate.html"><i class="bi bi-envelope me-1"></i>Donate</a>
         </li>
       </ul>
     </div>
@@ -92,7 +92,7 @@
         <div class="bg-white shadow-sm p-4 rounded h-100">
           <h5 class="fw-bold mb-3">Get in Touch</h5>
           <p><i class="bi bi-geo-alt-fill text-primary me-2"></i> Ho, Volta Region, Ghana</p>
-          <p><i class="bi bi-telephone-fill text-primary me-2"></i> +233 24 123 4567</p>
+          <p><i class="bi bi-telephone-fill text-primary me-2"></i> +233 593032627</p>
           <p><i class="bi bi-envelope-fill text-primary me-2"></i> info@writeforworld.org</p>
           <div class="mt-3">
             <a href="#" class="me-3"><i class="bi bi-facebook fs-4 text-primary"></i></a>
@@ -102,33 +102,36 @@
           </div>
         </div>
       </div>
-
-      <!-- Contact Form -->
-      <div class="col-md-7" data-aos="fade-left" data-aos-delay="400">
-        <div class="bg-white shadow-sm p-4 rounded h-100">
-          <form  action="https://formspree.io/f/xzzqkgqb" method="POST">
-            <div class="mb-3">
-              <label for="name" class="form-label">Full Name</label>
-              <input type="text" class="form-control" id="name" required>
-            </div>
-            <div class="mb-3">
-              <label for="email" class="form-label">Email Address</label>
-              <input type="email" class="form-control" id="email" required>
-            </div>
-            <div class="mb-3">
-              <label for="subject" class="form-label">Subject</label>
-              <input type="text" class="form-control" id="subject">
-            </div>
-            <div class="mb-3">
-              <label for="message" class="form-label">Message</label>
-              <textarea class="form-control" id="message" rows="4" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary fw-bold">
-              <i class="bi bi-send-fill me-1"></i> Send Message
-            </button>
-          </form>
-        </div>
+<!-- Contact Form -->
+<div class="col-md-7" data-aos="fade-left" data-aos-delay="400">
+  <div class="bg-white shadow-sm p-4 rounded h-100">
+    <form action="https://formspree.io/f/xzzqkgqb" method="POST">
+      <div class="mb-3">
+        <label for="name" class="form-label">Full Name</label>
+        <input type="text" class="form-control" id="name" name="name" required placeholder="Thomas Kumah">
       </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email Address</label>
+        <input type="email" class="form-control" id="email" name="email" required placeholder="thomaskumah@gmail.com">
+      </div>
+      <div class="mb-3">
+        <label for="phone" class="form-label">Phone Number</label>
+        <input type="tel" class="form-control" id="phone" name="phone" required placeholder="+233 24 123 4567">
+      </div>
+      <div class="mb-3">
+        <label for="subject" class="form-label">Subject</label>
+        <input type="text" class="form-control" id="subject" name="subject">
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">Message</label>
+        <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary fw-bold">
+        <i class="bi bi-send-fill me-1"></i> Send Message
+      </button>
+    </form>
+  </div>
+</div>
     </div>
   </div>
 </section><!-- Footer -->
@@ -155,18 +158,27 @@
            <li><a href="index.html" class="text-white text-decoration-none"><i class="bi bi-house-door me-1"></i>Home</a></li>
           <li><a href="about.html" class="text-white text-decoration-none"><i class="bi bi-info-circle me-2"></i> About</a></li>
           <li><a href="program.html" class="text-white text-decoration-none"><i class="bi bi-journal-text me-2"></i> Programs</a></li>
-          <li><a href="#donate" class="text-white text-decoration-none"><i class="bi bi-heart-fill me-2"></i> Donate</a></li>
-          <li><a href="#contact" class="text-white text-decoration-none"><i class="bi bi-envelope me-2"></i> Contact</a></li>
+          <li><a href="donate.html" class="text-white text-decoration-none"><i class="bi bi-heart-fill me-2"></i> Donate</a></li>
+          <li><a href="contact.html" class="text-white text-decoration-none"><i class="bi bi-envelope me-2"></i> Contact</a></li>
          </ul>
       </div>
 
       <!-- Social Media -->
       <div class="col-md-4 mb-3">
-        <h5 class="fw-bold">Follow Us</h5>
-        <a href="https://twitter.com/Write4World" class="text-white me-3 fs-5"><i class="bi bi-twitter"></i></a>
-        <a href="https://facebook.com/write4worldgh" class="text-white me-3 fs-5"><i class="bi bi-facebook"></i></a>
-        <a href="https://instagram.com/Write4Worldgh" class="text-white me-3 fs-5"><i class="bi bi-instagram"></i></a>
-      </div>
+  <h5 class="fw-bold">Follow Us</h5>
+  <a href="https://twitter.com/Write4World" class="text-white me-3 fs-5" target="_blank" rel="noopener">
+    <i class="bi bi-twitter"></i>
+  </a>
+  <a href="https://facebook.com/write4worldgh" class="text-white me-3 fs-5" target="_blank" rel="noopener">
+    <i class="bi bi-facebook"></i>
+  </a>
+  <a href="https://instagram.com/Write4Worldgh" class="text-white me-3 fs-5" target="_blank" rel="noopener">
+    <i class="bi bi-instagram"></i>
+  </a>
+  <a href="https://www.linkedin.com/company/write4world" class="text-white me-3 fs-5" target="_blank" rel="noopener">
+    <i class="bi bi-linkedin"></i>
+  </a>
+</div>
 
     </div>
 
