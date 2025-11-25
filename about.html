@@ -32,6 +32,18 @@
   position: relative;
   z-index: 1;
 }
+.donate-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1050;
+  border-radius: 50px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+.donate-float:hover {
+  transform: scale(1.05);
+  transition: 0.3s ease;
+}
 
 
 </style>
@@ -50,7 +62,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto align-items-lg-center">
         <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house-door me-1"></i>Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#programs"><i class="bi bi-journal-text me-1"></i>Programs</a></li>
+        <li class="nav-item"><a class="nav-link" href="program.html"><i class="bi bi-journal-text me-1"></i>Programs</a></li>
         <li class="nav-item"><a class="nav-link" href="#events"><i class="bi bi-calendar-event me-1"></i>Events</a></li>
         <li class="nav-item"><a class="nav-link" href="#blog"><i class="bi bi-newspaper me-1"></i>Blog</a></li>
         <li class="nav-item"><a class="nav-link" href="#about"><i class="bi bi-info-circle me-1"></i>About</a></li>
@@ -333,6 +345,10 @@
   </div>
 </section>
 
+<!-- Floating Donate Button -->
+<a href="#donate" class="btn btn-warning fw-bold donate-float">
+  <i class="bi bi-heart-fill me-1"></i> Donate
+</a>
 
  <!-- Footer -->
 <footer class="bg-dark text-white pt-3">
@@ -357,7 +373,7 @@
         <ul class="list-unstyled">
            <li><a href="index.html" class="text-white text-decoration-none"><i class="bi bi-house-door me-1"></i>Home</a></li>
           <li><a href="about.html" class="text-white text-decoration-none"><i class="bi bi-info-circle me-2"></i> About</a></li>
-          <li><a href="#programs" class="text-white text-decoration-none"><i class="bi bi-journal-text me-2"></i> Programs</a></li>
+          <li><a href="program.html" class="text-white text-decoration-none"><i class="bi bi-journal-text me-2"></i> Programs</a></li>
           <li><a href="#donate" class="text-white text-decoration-none"><i class="bi bi-heart-fill me-2"></i> Donate</a></li>
           <li><a href="#contact" class="text-white text-decoration-none"><i class="bi bi-envelope me-2"></i> Contact</a></li>
          </ul>
