@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <!-- Registration Form -->
+<form class="p-4 shadow-sm bg-light rounded" https://formspree.io/f/mqaoyowk method="POST">
+  <div class="mb-3">
+    <label for="event" class="form-label">Event</label>
+    <input type="text" class="form-control" id="event" name="event" readonly>
+  </div>
+  <div class="mb-3">
+    <label for="name" class="form-label">Full Name</label>
+    <input type="text" class="form-control" id="name" required>
+  </div>
+  <div class="mb-3">
+    <label for="email" class="form-label">Email Address</label>
+    <input type="email" class="form-control" id="email" required>
+  </div>
+  <button type="submit" class="btn btn-primary fw-bold">Submit Registration</button>
+</form>
+
+<script>
+  // Get event name from URL
+  const params = new URLSearchParams(window.location.search);
+  const eventName = params.get("event");
+  if (eventName) {
+    document.getElementById("event").value = eventName;
+  }
+</script> 
+</body>
+</html>
