@@ -1,16 +1,210 @@
-<section id="gallery" class="py-5 bg-white">
-  <div class="container">
-    <h2 class="mb-4 text-center">Our Impact in Pictures</h2>
-    <div class="row g-4">
-      <div class="col-md-4">
-        <img src="images/outreach1.jpg" class="img-fluid rounded shadow-sm" alt="Community outreach">
-      </div>
-      <div class="col-md-4">
-        <img src="images/workshop1.jpg" class="img-fluid rounded shadow-sm" alt="Youth workshop">
-      </div>
-      <div class="col-md-4">
-        <img src="images/empowerment1.jpg" class="img-fluid rounded shadow-sm" alt="Girls empowerment">
-      </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - [Your NGO Name]</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .donation-option {
+            border: 2px solid #e0e0e0;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+        .amount-buttons {
+            margin: 15px 0;
+        }
+        .amount-btn {
+            padding: 10px 20px;
+            margin: 5px;
+            border: 2px solid #007cba;
+            background: white;
+            color: #007cba;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .amount-btn.active {
+            background: #007cba;
+            color: white;
+        }
+        input[type="number"] {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 200px;
+        }
+        .payment-details {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>💝 Support Our Mission</h1>
+    <p>Your donation helps us make a difference in Ghana. Choose your preferred payment method below.</p>
+
+    <!-- International Donations -->
+    <div class="donation-option">
+        <h2>🌍 International Donations (PayPal)</h2>
+        <p>For donors outside Ghana or those using international cards</p>
+        
+        <div class="amount-buttons">
+            <strong>Select Amount (USD):</strong><br>
+            <button class="amount-btn" onclick="setAmount(10, 'usd')">$10</button>
+            <button class="amount-btn" onclick="setAmount(25, 'usd')">$25</button>
+            <button class="amount-btn" onclick="setAmount(50, 'usd')">$50</button>
+            <button class="amount-btn" onclick="setAmount(100, 'usd')">$100</button>
+        </div>
+        
+        <input type="number" id="usdAmount" placeholder="Or enter custom amount" min="1" onchange="setCustomAmount(this.value, 'usd')">
+        
+        <div style="margin: 20px 0;">
+            <button onclick="processPayPal()" style="background: #0070ba; color: white; padding: 15px 30px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer;">
+                Donate with PayPal
+            </button>
+        </div>
+        
+        <div id="paypalInfo" class="payment-details hidden">
+            <p><strong>PayPal Instructions:</strong></p>
+            <p>You'll be redirected to PayPal to complete your donation securely.</p>
+            <p>Amount: $<span id="finalUsdAmount">25</span></p>
+        </div>
     </div>
-  </div>
-</section>
+
+    <!-- Local Ghana Donations -->
+    <div class="donation-option">
+        <h2>🇬🇭 Local Ghana Donations</h2>
+        <p>For donors in Ghana using local payment methods</p>
+        
+        <div class="amount-buttons">
+            <strong>Select Amount (GHS):</strong><br>
+            <button class="amount-btn" onclick="setAmount(50, 'ghs')">₵50</button>
+            <button class="amount-btn" onclick="setAmount(100, 'ghs')">₵100</button>
+            <button class="amount-btn" onclick="setAmount(200, 'ghs')">₵200</button>
+            <button class="amount-btn" onclick="setAmount(500, 'ghs')">₵500</button>
+        </div>
+        
+        <input type="number" id="ghsAmount" placeholder="Or enter custom amount" min="1" onchange="setCustomAmount(this.value, 'ghs')">
+        
+        <div style="margin: 15px 0;">
+            <button onclick="showMobileMoney()" style="background: #ff6b00; color: white; padding: 12px 25px; margin: 5px; border: none; border-radius: 5px; cursor: pointer;">
+                📱 Mobile Money
+            </button>
+            <button onclick="showBankTransfer()" style="background: #28a745; color: white; padding: 12px 25px; margin: 5px; border: none; border-radius: 5px; cursor: pointer;">
+                🏦 Bank Transfer
+            </button>
+        </div>
+
+        <!-- Mobile Money Details -->
+        <div id="mobileMoney" class="payment-details hidden">
+            <h3>Mobile Money Payment</h3>
+            <p><strong>MTN Mobile Money:</strong> 0245477957</p>
+            <p><strong>Vodafone Cash:</strong> 020 123 4567</p>
+            <p><strong>Account Name:</strong> [YOUR NGO NAME]</p>
+            <p><strong>Reference:</strong> DONATION[YOUR NAME]</p>
+            <p><em>After payment, please WhatsApp screenshot to: +233 245477957</em></p>
+            <button onclick="hideAllMethods()" style="padding: 8px 15px; margin-top: 10px;">Close</button>
+        </div>
+
+        <!-- Bank Transfer Details -->
+        <div id="bankTransfer" class="payment-details hidden">
+            <h3>Bank Transfer Details</h3>
+            <p><strong>Bank:</strong> GCB Bank Ltd.</p>
+            <p><strong>Account Name:</strong> [YOUR NGO NAME]</p>
+            <p><strong>Account Number:</strong> 12345678901</p>
+            <p><strong>Branch:</strong> Accra Main</p>
+            <p><strong>SWIFT/BIC:</strong> GHCBGHAC</p>
+            <p><em>Use your name as reference when transferring</em></p>
+            <button onclick="hideAllMethods()" style="padding: 8px 15px; margin-top: 10px;">Close</button>
+        </div>
+    </div>
+
+    <script>
+        // Current amounts
+        let currentUsdAmount = 25;
+        let currentGhsAmount = 100;
+
+        function setAmount(amount, currency) {
+            if (currency === 'usd') {
+                currentUsdAmount = amount;
+                document.getElementById('usdAmount').value = amount;
+                updateActiveButtons(amount, 'usd');
+            } else {
+                currentGhsAmount = amount;
+                document.getElementById('ghsAmount').value = amount;
+                updateActiveButtons(amount, 'ghs');
+            }
+        }
+
+        function setCustomAmount(amount, currency) {
+            if (currency === 'usd') {
+                currentUsdAmount = amount;
+                updateActiveButtons(null, 'usd');
+            } else {
+                currentGhsAmount = amount;
+                updateActiveButtons(null, 'ghs');
+            }
+        }
+
+        function updateActiveButtons(amount, currency) {
+            // Remove active class from all buttons
+            document.querySelectorAll('.amount-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Add active class to clicked button
+            if (amount) {
+                document.querySelectorAll('.amount-btn').forEach(btn => {
+                    if (btn.textContent.includes(currency === 'usd' ? '$' + amount : '₵' + amount)) {
+                        btn.classList.add('active');
+                    }
+                });
+            }
+        }
+
+        function processPayPal() {
+            const amount = currentUsdAmount;
+            document.getElementById('finalUsdAmount').textContent = amount;
+            document.getElementById('paypalInfo').classList.remove('hidden');
+            
+            // In a real implementation, this would redirect to PayPal
+            alert(In a real implementation, you would now be redirected to PayPal to donate $${amount}. For now, please use the local payment methods.);
+            
+            // Real PayPal redirect would be:
+            // window.location.href = https://www.paypal.com/donate?hosted_button_id=YOUR_BUTTON_ID&amount=${amount};
+        }
+
+        function showMobileMoney() {
+            hideAllMethods();
+            document.getElementById('mobileMoney').classList.remove('hidden');
+        }
+
+        function showBankTransfer() {
+            hideAllMethods();
+            document.getElementById('bankTransfer').classList.remove('hidden');
+        }
+
+        function hideAllMethods() {
+            document.getElementById('mobileMoney').classList.add('hidden');
+            document.getElementById('bankTransfer').classList.add('hidden');
+            document.getElementById('paypalInfo').classList.add('hidden');
+        }
+
+        // Initialize with default amounts
+        setAmount(25, 'usd');
+        setAmount(100, 'ghs');
+    </script>
+</body>
+</html>
