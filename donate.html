@@ -28,6 +28,64 @@
       transform: scale(1.05);
       transition: 0.3s ease;
     }
+
+    /* Base style for all social icons */
+    .footer-social a {
+      display: inline-block;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    /* Hover effect: enlarge slightly */
+    .footer-social a:hover {
+      transform: scale(1.2);
+    }
+
+    /* Individual platform colors */
+    .footer-social a .bi-twitter:hover {
+      color: #1DA1F2;
+      /* Twitter blue */
+    }
+
+    .footer-social a .bi-facebook:hover {
+      color: #1877F2;
+      /* Facebook blue */
+    }
+
+    .footer-social a .bi-instagram:hover {
+      color: #E4405F;
+      /* Instagram pink */
+    }
+
+    .footer-social a .bi-linkedin:hover {
+      color: #0A66C2;
+      /* LinkedIn blue */
+    }
+
+    /* Quick Links styled as pill buttons */
+    .footer-links a {
+      display: inline-block;
+      margin: 6px 0;
+      padding: 8px 16px;
+      border-radius: 50px;
+      /* pill shape */
+      background-color: rgba(255, 255, 255, 0.1);
+      /* subtle background */
+      color: #ffffff;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    /* Hover effect */
+    .footer-links a:hover {
+      background-color: #ffc107;
+      /* gold highlight */
+      color: #212529;
+      /* dark text for contrast */
+      transform: translateY(-3px);
+      /* slight lift */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
   </style>
 </head>
 
@@ -36,8 +94,8 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="#">
-        <img src="images/ww1.jpg" alt="Write for World Logo" height="40" class="me-2">
+      <a class="navbar-brand fw-bold" href="index.html">
+        <img src="images/ww1_result_result.webp" alt="Write for World Logo" height="40" class="me-2">
         Write for World
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -54,6 +112,8 @@
           <li class="nav-item"><a class="nav-link" href="about.html"><i class="bi bi-info-circle me-1"></i>About</a>
           </li>
           <li class="nav-item"><a class="nav-link" href="contact.html"><i class="bi bi-envelope me-1"></i>Contact</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html"><i class="bi bi-images me-1"></i>Gallery</a>
           </li>
           <li class="nav-item ms-lg-3">
             <a class="btn btn-warning text-dark fw-bold" href="donate.html"><i
@@ -82,8 +142,11 @@
           <div class="card h-100 shadow-sm text-center">
             <div class="card-body">
               <i class="bi bi-pencil-square display-5 text-primary mb-3"></i>
-              <h5 class="card-title fw-bold">GH₵ 50</h5>
-              <p class="card-text small">Provides writing materials for one teen.</p>
+              <h5 class="card-title fw-bold">
+                <span class="text-dark">$</span>50.00
+              </h5>
+
+              <p class="card-text small">Provides writing materials for teens.</p>
             </div>
           </div>
         </div>
@@ -91,7 +154,9 @@
           <div class="card h-100 shadow-sm text-center">
             <div class="card-body">
               <i class="bi bi-book display-5 text-success mb-3"></i>
-              <h5 class="card-title fw-bold">GH₵ 200</h5>
+                <h5 class="card-title fw-bold">
+                <span class="text-dark">$</span>200.00
+              </h5>
               <p class="card-text small">Supports a Creative Writing Clinic session.</p>
             </div>
           </div>
@@ -100,7 +165,9 @@
           <div class="card h-100 shadow-sm text-center">
             <div class="card-body">
               <i class="bi bi-people-fill display-5 text-danger mb-3"></i>
-              <h5 class="card-title fw-bold">GH₵ 500</h5>
+                <h5 class="card-title fw-bold">
+                <span class="text-dark">$</span>500.00
+              </h5>
               <p class="card-text small">Funds mentoring for a group of students.</p>
             </div>
           </div>
@@ -151,38 +218,35 @@
         </div>
 
         <!-- Quick Links -->
-        <div class="col-md-4 mb-3">
+        <div class="col-md-4 mb-3 footer-links">
           <h5 class="fw-bold">Quick Links</h5>
           <ul class="list-unstyled">
-            <li><a href="index.html" class="text-white text-decoration-none"><i
-                  class="bi bi-house-door me-1"></i>Home</a></li>
-            <li><a href="about.html" class="text-white text-decoration-none"><i class="bi bi-info-circle me-2"></i>
-                About</a></li>
-            <li><a href="program.html" class="text-white text-decoration-none"><i class="bi bi-journal-text me-2"></i>
-                Programs</a></li>
-            <li><a href="donate.html" class="text-white text-decoration-none"><i class="bi bi-heart-fill me-2"></i>
-                Donate</a></li>
-            <li><a href="contact.html" class="text-white text-decoration-none"><i class="bi bi-envelope me-2"></i>
-                Contact</a></li>
+            <li><a href="index.html"><i class="bi bi-house-door me-1"></i> Home</a></li>
+            <li><a href="about.html"><i class="bi bi-info-circle me-2"></i> About</a></li>
+            <li><a href="program.html"><i class="bi bi-journal-text me-2"></i> Programs</a></li>
+            <li><a href="donate.html"><i class="bi bi-heart-fill me-2"></i> Donate</a></li>
+            <li><a href="contact.html"><i class="bi bi-envelope me-2"></i> Contact</a></li>
+            <li><a href="gallery.html"><i class="bi bi-images me-1"></i>Gallery</a></li>
           </ul>
         </div>
-
         <!-- Social Media -->
-       <div class="col-md-4 mb-3">
-  <h5 class="fw-bold">Follow Us</h5>
-  <a href="https://twitter.com/Write4World" class="text-white me-3 fs-5" target="_blank" rel="noopener">
-    <i class="bi bi-twitter"></i>
-  </a>
-  <a href="https://facebook.com/write4worldgh" class="text-white me-3 fs-5" target="_blank" rel="noopener">
-    <i class="bi bi-facebook"></i>
-  </a>
-  <a href="https://instagram.com/Write4Worldgh" class="text-white me-3 fs-5" target="_blank" rel="noopener">
-    <i class="bi bi-instagram"></i>
-  </a>
-  <a href="https://www.linkedin.com/company/write4world" class="text-white me-3 fs-5" target="_blank" rel="noopener">
-    <i class="bi bi-linkedin"></i>
-  </a>
-</div>
+        <div class="col-md-4 mb-3 footer-social">
+          <h5 class="fw-bold">Follow Us</h5>
+          <a href="https://x.com/Write4worldG?" class="text-white me-3 fs-5" target="_blank" rel="noopener">
+            <i class="bi bi-twitter-x"></i>
+          </a>
+          <a href="https://www.facebook.com/share/17ToMDU2Qe/" class="text-white me-3 fs-5" target="_blank"
+            rel="noopener">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="https://instagram.com/Write4Worldgh" class="text-white me-3 fs-5" target="_blank" rel="noopener">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/company/write4world" class="text-white me-3 fs-5" target="_blank"
+            rel="noopener">
+            <i class="bi bi-linkedin"></i>
+          </a>
+        </div>
 
       </div>
 

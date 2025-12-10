@@ -15,7 +15,7 @@
   }
 
   .hero-section {
-  background: url('images/ww1.jpg') no-repeat center center;
+  background: url('images/ww1_result_result.webp') no-repeat center center;
   background-size: cover;
   background-color: #0d6efd;
   overflow: hidden;
@@ -45,6 +45,54 @@
   transition: 0.3s ease;
 }
 
+/* Base style for all social icons */
+.footer-social a {
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect: enlarge slightly */
+.footer-social a:hover {
+  transform: scale(1.2);
+}
+
+/* Individual platform colors */
+.footer-social a .bi-twitter:hover {
+  color: #1DA1F2; /* Twitter blue */
+}
+
+.footer-social a .bi-facebook:hover {
+  color: #1877F2; /* Facebook blue */
+}
+
+.footer-social a .bi-instagram:hover {
+  color: #E4405F; /* Instagram pink */
+}
+
+.footer-social a .bi-linkedin:hover {
+  color: #0A66C2; /* LinkedIn blue */
+}
+/* Quick Links styled as pill buttons */
+.footer-links a {
+  display: inline-block;
+  margin: 6px 0;
+  padding: 8px 16px;
+  border-radius: 50px;            /* pill shape */
+  background-color: rgba(255,255,255,0.1); /* subtle background */
+  color: #ffffff;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.footer-links a:hover {
+  background-color: #ffc107;      /* gold highlight */
+  color: #212529;                 /* dark text for contrast */
+  transform: translateY(-3px);    /* slight lift */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
 
 </style>
 </head>
@@ -53,7 +101,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
   <div class="container">
     <a class="navbar-brand fw-bold" href="#">
-      <img src="images/ww1.jpg" alt="Write for World Logo" height="40" class="me-2">
+      <img src="images/ww1_result_result.webp" alt="Write for World Logo" height="40" class="me-2">
       Write for World
     </a>
    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -63,12 +111,14 @@
       <ul class="navbar-nav ms-auto align-items-lg-center">
         <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house-door me-1"></i>Home</a></li>
         <li class="nav-item"><a class="nav-link" href="program.html"><i class="bi bi-journal-text me-1"></i>Programs</a></li>
-        <li class="nav-item"><a class="nav-link" href="#events"><i class="bi bi-calendar-event me-1"></i>Events</a></li>
-        <li class="nav-item"><a class="nav-link" href="#blog"><i class="bi bi-newspaper me-1"></i>Blog</a></li>
-        <li class="nav-item"><a class="nav-link" href="#about"><i class="bi bi-info-circle me-1"></i>About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact"><i class="bi bi-envelope me-1"></i>Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="event.html"><i class="bi bi-calendar-event me-1"></i>Events</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog.html"><i class="bi bi-newspaper me-1"></i>Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html"><i class="bi bi-info-circle me-1"></i>About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html"><i class="bi bi-envelope me-1"></i>Contact</a></li>
         <li class="nav-item ms-lg-3">
-          <a class="btn btn-warning text-dark fw-bold" href="#donate"><i class="bi bi-envelope me-1"></i>Donate</a>
+          <li class="nav-item"><a class="nav-link" href="gallery.html"><i class="bi bi-images me-1"></i>Gallery</a>
+          </li>
+          <a class="btn btn-warning text-dark fw-bold" href="donate.html"><i class="bi bi-envelope me-1"></i>Donate</a>
         </li>
       </ul>
     </div>
@@ -80,7 +130,7 @@
 <section class="hero-section text-white text-center py-5 position-relative">
   <div class="overlay"></div>
   <div class="container position-relative">
-    <img src="images/ww1.jpg" alt="Write for World Logo" height="100" class="mb-3" data-aos="zoom-in" data-aos-delay="100">
+    <img src="images/ww1_result_result.webp" alt="Write for World Logo" height="100" class="mb-3" data-aos="zoom-in" data-aos-delay="100">
     <h1 class="fw-bold" data-aos="fade-up" data-aos-delay="300">About Us</h1>
     <p class="lead" data-aos="fade-up" data-aos-delay="500">
       Empowering youth through education, health, leadership, and sustainability.
@@ -341,12 +391,12 @@
   <div class="container">
     <h2 class="fw-bold mb-4"data-aos="fade-up" data-aos-delay="300" >Get Involved</h2>
     <p class="lead">Whether you are a volunteer, donor, educator or advocate, Write for World welcomes collaboration to expand its reach and deepen its impact. Together, we can write a new chapter for Ghana’s youth; one filled with hope, opportunity and transformation.</p>
-    <a href="#contact" class="btn btn-primary btn-lg fw-bold">Join Us Today</a>
+    <a href="contact.html" class="btn btn-primary btn-lg fw-bold">Join Us Today</a>
   </div>
 </section>
 
 <!-- Floating Donate Button -->
-<a href="#donate" class="btn btn-warning fw-bold donate-float">
+<a href="donate.html" class="btn btn-warning fw-bold donate-float">
   <i class="bi bi-heart-fill me-1"></i> Donate
 </a>
 
@@ -367,25 +417,26 @@
   <p><i class="bi bi-phone-fill me-2"></i> Mobile Phone: 0593032627</p>
 </div>
 
-      <!-- Quick Links -->
-      <div class="col-md-4 mb-3">
-        <h5 class="fw-bold">Quick Links</h5>
-        <ul class="list-unstyled">
-           <li><a href="index.html" class="text-white text-decoration-none"><i class="bi bi-house-door me-1"></i>Home</a></li>
-          <li><a href="about.html" class="text-white text-decoration-none"><i class="bi bi-info-circle me-2"></i> About</a></li>
-          <li><a href="program.html" class="text-white text-decoration-none"><i class="bi bi-journal-text me-2"></i> Programs</a></li>
-          <li><a href="#donate" class="text-white text-decoration-none"><i class="bi bi-heart-fill me-2"></i> Donate</a></li>
-          <li><a href="#contact" class="text-white text-decoration-none"><i class="bi bi-envelope me-2"></i> Contact</a></li>
-         </ul>
-      </div>
+       <!-- Quick Links -->
+      <div class="col-md-4 mb-3 footer-links">
+  <h5 class="fw-bold">Quick Links</h5>
+  <ul class="list-unstyled">
+    <li><a href="index.html"><i class="bi bi-house-door me-1"></i> Home</a></li>
+    <li><a href="about.html"><i class="bi bi-info-circle me-2"></i> About</a></li>
+    <li><a href="program.html"><i class="bi bi-journal-text me-2"></i> Programs</a></li>
+    <li><a href="donate.html"><i class="bi bi-heart-fill me-2"></i> Donate</a></li>
+    <li><a href="contact.html"><i class="bi bi-envelope me-2"></i> Contact</a></li>
+    <li><a  href="gallery.html"><i class="bi bi-images me-1"></i>Gallery</a></li>
+  </ul>
+</div>
 
       <!-- Social Media -->
-      <div class="col-md-4 mb-3">
+    <div class="col-md-4 mb-3 footer-social">
   <h5 class="fw-bold">Follow Us</h5>
-  <a href="https://twitter.com/Write4World" class="text-white me-3 fs-5" target="_blank" rel="noopener">
-    <i class="bi bi-twitter"></i>
+  <a href="https://x.com/Write4worldG?" class="text-white me-3 fs-5" target="_blank" rel="noopener">
+   <i class="bi bi-twitter-x"></i>
   </a>
-  <a href="https://facebook.com/write4worldgh" class="text-white me-3 fs-5" target="_blank" rel="noopener">
+  <a href="https://facebook.com/write4worldghhttps://www.facebook.com/share/17ToMDU2Qe/" class="text-white me-3 fs-5" target="_blank" rel="noopener">
     <i class="bi bi-facebook"></i>
   </a>
   <a href="https://instagram.com/Write4Worldgh" class="text-white me-3 fs-5" target="_blank" rel="noopener">

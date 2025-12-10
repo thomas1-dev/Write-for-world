@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Write for World</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  
+<style>
+    body {
+    padding-top: 50px; /* adjust based on your navbar height */
+ 
+  }
+.donate-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1050;
+  border-radius: 50px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+.donate-float:hover {
+  transform: scale(1.05);
+  transition: 0.3s ease;
+}
+
+/* Base style for all social icons */
+.footer-social a {
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect: enlarge slightly */
+.footer-social a:hover {
+  transform: scale(1.2);
+}
+
+/* Individual platform colors */
+.footer-social a .bi-twitter:hover {
+  color: #1DA1F2; /* Twitter blue */
+}
+
+.footer-social a .bi-facebook:hover {
+  color: #1877F2; /* Facebook blue */
+}
+
+.footer-social a .bi-instagram:hover {
+  color: #E4405F; /* Instagram pink */
+}
+
+.footer-social a .bi-linkedin:hover {
+  color: #0A66C2; /* LinkedIn blue */
+}/* Quick Links styled as pill buttons */
+.footer-links a {
+  display: inline-block;
+  margin: 6px 0;
+  padding: 8px 16px;
+  border-radius: 50px;            /* pill shape */
+  background-color: rgba(255,255,255,0.1); /* subtle background */
+  color: #ffffff;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.footer-links a:hover {
+  background-color: #ffc107;      /* gold highlight */
+  color: #212529;                 /* dark text for contrast */
+  transform: translateY(-3px);    /* slight lift */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-body a {
+  margin-top: auto;   /* pushes the link to the bottom */
+}
+</style>
+</head>
+<body>
+
+    <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">
+      <img src="images/ww1_result_result.webp" alt="Write for World Logo" height="40" class="me-2">
+      Write for World
+    </a>
+   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+  <span class="navbar-toggler-icon"></span>
+</button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house-door me-1"></i>Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="program.html"><i class="bi bi-journal-text me-1"></i>Programs</a></li>
+        <li class="nav-item"><a class="nav-link" href="event.html"><i class="bi bi-calendar-event me-1"></i>Events</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog.html"><i class="bi bi-newspaper me-1"></i>Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html"><i class="bi bi-info-circle me-1"></i>About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html"><i class="bi bi-envelope me-1"></i>Contact</a></li>
+        <li class="nav-item ms-lg-3">
+          <li class="nav-item"><a class="nav-link" href="gallery.html"><i class="bi bi-images me-1"></i>Gallery</a>
+          </li>`
+          <a class="btn btn-warning text-dark fw-bold" href="donate.html"><i class="bi bi-envelope me-1"></i>Donate</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <!-- Hero Section -->
+  <section class="py-5 bg-primary text-white text-center">
+    <div class="container">
+      <h1 class="fw-bold">Our Blog</h1>
+      <p class="lead">Stories, updates, and media coverage from Write for World.</p>
+    </div>
+  </section>
+
+  <!-- Blog Content -->
+  <section class="py-5">
+    <div class="container">
+
+      <!-- Nav Tabs -->
+      <ul class="nav nav-pills justify-content-center mb-4" id="blogTabs">
+  <li class="nav-item">
+    <a class="nav-link active" data-bs-toggle="pill" href="#stories">Our Stories</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-bs-toggle="pill" href="#news">In the News</a>
+  </li>
+</ul>
+
+      <!-- Tab Content -->
+      <div class="tab-content">
+
+        <!-- Our Stories -->
+        <div class="tab-pane fade show active" id="stories">
+          <div class="row g-4">
+
+            <!-- Blog Card -->
+            <div class="col-md-4">
+              <div class="card h-100 shadow-sm">
+                <img src="images/write for challenge project 1_result_result.webp" class="card-img-top" alt="Blog post image">
+                <div class="card-body">
+                  <h5 class="card-title fw-bold">Empowering Youth Through Writing</h5>
+                  <p class="card-text text-muted">Discover how our creative writing clinics are transforming lives...</p>
+                  <a href="blog-post1.html" class="btn btn-primary btn-sm">Read More</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Blog Card -->
+            <div class="col-md-4">
+              <div class="card h-100 shadow-sm">
+                <img src="images/Some W4W Project Team Members_result_result.webp" class="card-img-top" alt="Blog post image">
+                <div class="card-body">
+                  <h5 class="card-title fw-bold">Volunteer Spotlight</h5>
+                  <p class="card-text text-muted">Meet the amazing volunteers who make our programs possible.</p>
+                  <a href="blog-post2.html" class="btn btn-primary btn-sm">Read More</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- In the News -->
+        <div class="tab-pane fade" id="news">
+          <div class="row g-4">
+
+            <!-- External Coverage Card -->
+            <div class="col-md-4">
+              <div class="card h-100 shadow-sm">
+                <img src="images/classroom Block_result_result.webp" class="card-img-top" alt="JoyOnline article">
+                <div class="card-body">
+                  <h5 class="card-title fw-bold">US Embassy hands over classroom block to Avetakpo</h5>
+                  <p class="card-text text-muted">
+  The United States Embassy has officially handed over a newly constructed classroom block to the Avetakpo community, 
+  providing a safe and modern learning environment for local students. This initiative strengthens educational access, 
+  supports youth development, and reflects the Embassy’s commitment to fostering community growth in Ghana.
+</p>
+                  <a href="https://www.myjoyonline.com/us-embassy-hands-over-classroom-block-to-avetakpo/" 
+                     class="btn btn-outline-primary btn-sm" target="_blank" rel="noopener">
+                    Read on MyJoyOnline
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Another External Coverage -->
+        
+             <div class="col-md-4">
+              <div class="card h-100 shadow-sm">
+                <img src="images/Write-for-World-graduates-30-at-risk-females-in-entrepreneurship-and-fashion-design-program_result_result.webp" class="card-img-top" alt="JoyOnline article">
+                <div class="card-body">
+                  <h5 class="card-title fw-bold">Write for World graduates 30 females in entrepreneurship and fashion design programme</h5>
+                <p class="card-text text-muted">
+  This milestone program equipped young women with practical skills in business and fashion design, 
+  empowering them to pursue sustainable careers and contribute to community development. 
+  The achievement was proudly featured by MyJoyOnline.
+</p>
+                  <a href="https://www.myjoyonline.com/write-for-world-graduates-30-females-in-entrepreneurship-and-fashion-design-programme/" 
+                     class="btn btn-outline-primary btn-sm" target="_blank" rel="noopener">
+                    Read on MyJoyOnline
+                  </a>
+                </div>
+              </div>
+            </div>
+
+             <div class="col-md-4">
+              <div class="card h-100 shadow-sm">
+                <img src="images/Write for world lunching_result_result.webp" class="card-img-top" alt="JoyOnline article">
+                <div class="card-body">
+                  <h5 class="card-title fw-bold">Write for World initiates project targeted at eradicating poverty-induced social vices</h5>
+                <p class="card-text text-muted">
+  Write for World has launched a transformative project aimed at tackling poverty-driven social vices by 
+  empowering vulnerable communities with education, vocational training, and mentorship. The initiative 
+  seeks to reduce unemployment, inspire positive youth engagement, and create sustainable pathways out of 
+  poverty, fostering safer and more resilient societies.
+                  </p>
+                  <a href="https://www.myjoyonline.com/write-for-world-initiates-project-targeted-at-eradicating-poverty-induced-social-vices/" 
+                     class="btn btn-outline-primary btn-sm" target="_blank" rel="noopener">
+                    Read on MyJoyOnline
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card h-100 shadow-sm">
+                <img src="images/Chairman Elected_result_result.webp" class="card-img-top" alt="JoyOnline article">
+                <div class="card-body">
+                  <h5 class="card-title fw-bold">Write for World appoints new board chairman</h5>
+                <p class="card-text text-muted">
+  Write for World has appointed Korsi Bodja as its new board chairman, bringing his experience in 
+  leadership and philanthropy to guide the organisation’s mission. His two-year tenure will focus 
+  on innovative policies and strengthening community programs, a commitment highlighted during the 
+  annual general meeting.
+
+                  </p>
+                  <a href="https://www.ghanaweb.com/GhanaHomePage/NewsArchive/Write-for-World-appoints-new-board-chairman-1914729" 
+                     class="btn btn-outline-primary btn-sm" target="_blank" rel="noopener">
+                    Read on GhanaWeb
+                  </a>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer CTA -->
+  <section class="py-5 bg-primary text-white text-center">
+    <div class="container">
+      <h2 class="fw-bold mb-3">Get Involved</h2>
+      <p class="lead mb-4">Support our mission by donating or volunteering today.</p>
+      <a href="donate.html" class="btn btn-light btn-lg fw-bold me-3">
+        <i class="bi bi-heart-fill me-1"></i> Donate
+      </a>
+      <a href="vregis.html" class="btn btn-outline-light btn-lg fw-bold">
+        <i class="bi bi-people-fill me-1"></i> Volunteer
+      </a>
+    </div>
+  </section>
+  <!-- Floating Donate Button -->
+<a href="donate.html" class="btn btn-warning fw-bold donate-float">
+  <i class="bi bi-heart-fill me-1"></i> Donate
+</a>
+
+  <!-- Footer -->
+<footer class="bg-dark text-white pt-3">
+  <div class="container">
+    <div class="row text-center text-md-start">
+      
+      <!-- Contact Details -->
+<div class="col-md-4 mb-3">
+  <h5 class="fw-bold">CONTACT US</h5>
+  <p><i class="bi bi-building me-2"></i> Head Office: Opposite Ghana Water Company Limited, Ho - V/R Ghana</p>
+  <p><i class="bi bi-geo-alt-fill me-2"></i> Address: P.O. Box HP 361, Ho – Volta Region, Ghana, West Africa</p>
+  <p><i class="bi bi-map me-2"></i> Digital Address: VH-4001-3748</p>
+  <p><i class="bi bi-envelope-fill me-2"></i> Email: info@writeforworld.org / write4worldgh@gmail.com</p>
+  <p><i class="bi bi-globe me-2"></i> Website: <a href="https://www.writeforworld.org" class="text-white text-decoration-none">www.writeforworld.org</a></p>
+  <p><i class="bi bi-telephone-fill me-2"></i> Telephone: 0362295806</p>
+  <p><i class="bi bi-phone-fill me-2"></i> Mobile Phone: 0593032627</p>
+</div>
+
+      <!-- Quick Links -->
+      <div class="col-md-4 mb-3 footer-links">
+  <h5 class="fw-bold">Quick Links</h5>
+  <ul class="list-unstyled">
+    <li><a href="index.html"><i class="bi bi-house-door me-1"></i> Home</a></li>
+    <li><a href="about.html"><i class="bi bi-info-circle me-2"></i> About</a></li>
+    <li><a href="program.html"><i class="bi bi-journal-text me-2"></i> Programs</a></li>
+    <li><a href="donate.html"><i class="bi bi-heart-fill me-2"></i> Donate</a></li>
+    <li><a href="contact.html"><i class="bi bi-envelope me-2"></i> Contact</a></li>
+    <li><a  href="gallery.html"><i class="bi bi-images me-1"></i>Gallery</a>
+  </ul>
+</div>
+
+        <!-- Social Media -->
+           <div class="col-md-4 mb-3 footer-social">
+  <h5 class="fw-bold">Follow Us</h5>
+  <a href="https://x.com/Write4worldG?" class="text-white me-3 fs-5" target="_blank" rel="noopener">
+    <i class="bi bi-twitter-x"></i>
+  </a>
+  <a href="https://www.facebook.com/share/17ToMDU2Qe/" class="text-white me-3 fs-5" target="_blank" rel="noopener">
+    <i class="bi bi-facebook"></i>
+  </a>
+  <a href="https://instagram.com/Write4Worldgh" class="text-white me-3 fs-5" target="_blank" rel="noopener">
+    <i class="bi bi-instagram"></i>
+  </a>
+  <a href="https://www.linkedin.com/company/write4world" class="text-white me-3 fs-5" target="_blank" rel="noopener">
+    <i class="bi bi-linkedin"></i>
+  </a>
+</div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="text-center mt-3 border-top border-light pt-3">
+      <p class="mb-0">&copy; 2025 Write for World. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

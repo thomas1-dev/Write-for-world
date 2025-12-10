@@ -40,6 +40,53 @@
   transform: scale(1.05);
   transition: 0.3s ease;
 }
+/* Base style for all social icons */
+.footer-social a {
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect: enlarge slightly */
+.footer-social a:hover {
+  transform: scale(1.2);
+}
+
+/* Individual platform colors */
+.footer-social a .bi-twitter:hover {
+  color: #1DA1F2; /* Twitter blue */
+}
+
+.footer-social a .bi-facebook:hover {
+  color: #1877F2; /* Facebook blue */
+}
+
+.footer-social a .bi-instagram:hover {
+  color: #E4405F; /* Instagram pink */
+}
+
+.footer-social a .bi-linkedin:hover {
+  color: #0A66C2; /* LinkedIn blue */
+}
+/* Quick Links styled as pill buttons */
+.footer-links a {
+  display: inline-block;
+  margin: 6px 0;
+  padding: 8px 16px;
+  border-radius: 50px;            /* pill shape */
+  background-color: rgba(255,255,255,0.1); /* subtle background */
+  color: #ffffff;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.footer-links a:hover {
+  background-color: #ffc107;      /* gold highlight */
+  color: #212529;                 /* dark text for contrast */
+  transform: translateY(-3px);    /* slight lift */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
 
 </style>
 </head>
@@ -48,8 +95,8 @@
  <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
   <div class="container">
-    <a class="navbar-brand fw-bold" href="#">
-      <img src="images/ww1.jpg" alt="Write for World Logo" height="40" class="me-2">
+    <a class="navbar-brand fw-bold" href="index.html">
+      <img src="images/ww1_result_result.webp" alt="Write for World Logo" height="40" class="me-2">
       Write for World
     </a>
    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -64,7 +111,9 @@
         <li class="nav-item"><a class="nav-link" href="about.html"><i class="bi bi-info-circle me-1"></i>About</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html"><i class="bi bi-envelope me-1"></i>Contact</a></li>
         <li class="nav-item ms-lg-3">
-          <a class="btn btn-warning text-dark fw-bold" href="#donate"><i class="bi bi-envelope me-1"></i>Donate</a>
+          <li class="nav-item"><a class="nav-link" href="gallery.html"><i class="bi bi-images me-1"></i>Gallery</a>
+          </li>
+          <a class="btn btn-warning text-dark fw-bold" href="donate.html"><i class="bi bi-envelope me-1"></i>Donate</a>
         </li>
       </ul>
     </div>
@@ -83,39 +132,90 @@
     <p class="lead text-center mb-5" data-aos="fade-up" data-aos-delay="200">
       Discover upcoming opportunities to engage with Write for World and explore highlights from past events.
     </p>
+  </div>
+</section>
 
-    <!-- Upcoming Events -->
-    <div class="mb-5">
-      <h3 class="fw-bold mb-3" data-aos="fade-right" data-aos-delay="300">Upcoming Events</h3>
-      <div class="row g-4">
-        <!-- Example Upcoming Event -->
-        <div class="col-md-6">
-          <div class="card shadow-sm h-100" data-aos="fade-up" data-aos-delay="400">
-            <div class="card-body">
-              <h5 class="card-title fw-bold">Youth Empowerment Workshop</h5>
-              <p class="card-text">Join us for a hands-on workshop on leadership and creative writing.</p>
-              <p class="text-muted"><i class="bi bi-calendar-event me-2"></i> December 15, 2025 | Ho, Ghana</p>
-             <a href="/register.html?event=Youth Empowerment Workshop" class="btn btn-primary fw-bold">
-  Register Now
-</a>
 
-                <i class="bi bi-pencil-square me-1"></i> Register Now
-              </a>
+  <!-- Tabs -->
+  <div class="container py-4">
+    <ul class="nav nav-pills justify-content-center mb-4" id="eventTabs">
+      <li class="nav-item">
+        <a class="nav-link active" data-bs-toggle="pill" href="#upcoming">Upcoming Event</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="pill" href="#ongoing">Ongoing Event</a>
+      </li>
+    </ul>
+
+    <!-- Tab Content -->
+    <div class="tab-content">
+
+      <!-- Upcoming Events -->
+      <div class="tab-pane fade show active" id="upcoming">
+        <section class="py-4 bg-white">
+          <div class="container">
+            <h3 class="fw-bold mb-4 text-center" data-aos="fade-up" data-aos-delay="100">Upcoming Events</h3>
+
+            <div class="row g-4 justify-content-center">
+              <div class="col-md-8 col-lg-6">
+                <div class="card shadow-sm h-100 text-center" data-aos="fade-up" data-aos-delay="200">
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold">Youth Empowerment Workshop</h5>
+                    <p class="card-text">Join us for an empowering session to inspire and equip the youth.</p>
+                    <p class="text-muted">
+                      <i class="bi bi-calendar-event me-2"></i> December 15, 2025 | Ho, Ghana
+                    </p>
+                    <a href="/register.html?event=Youth Empowerment Workshop" class="btn btn-primary fw-bold">
+                      <i class="bi bi-pencil-square me-1"></i> Register Now
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <!-- Add more upcoming events here -->
-      </div>
-    </div>
 
-    <!-- Past Events -->
-    <div>
-      <h3 class="fw-bold mb-3" data-aos="fade-right" data-aos-delay="500">Past Highlights</h3>
+          </div>
+        </section>
+      </div>
+
+      <!-- Ongoing Events -->
+      <div class="tab-pane fade" id="ongoing">
+        <section class="py-4 bg-white">
+          <div class="container">
+            <h3 class="fw-bold mb-4 text-center" data-aos="fade-up" data-aos-delay="100">Ongoing Events</h3>
+
+            <div class="row g-4 justify-content-center">
+              <div class="col-md-8 col-lg-6">
+                <div class="card shadow-sm h-100 text-center" data-aos="fade-up" data-aos-delay="200">
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold">Monthly Writing Contest</h5>
+                    <p class="card-text">Encouraging young writers to showcase their talent and win prizes.</p>
+                    <p class="text-muted">
+                      <i class="bi bi-calendar-event me-2"></i> Ongoing | Submit by end of each month
+                    </p>
+                    <a href="contest.html" class="btn btn-primary fw-bold">
+                      <i class="bi bi-pencil-square me-1"></i> Participate Now
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Past Highlights (outside tabs) -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h3 class="fw-bold mb-4 text-center" data-aos="fade-right" data-aos-delay="100">Past Highlights</h3>
+
       <div class="row g-4">
-        <!-- Example Past Event -->
         <div class="col-md-4">
-          <div class="card h-100 shadow-sm" data-aos="fade-up" data-aos-delay="600">
-            <img src="images/uploads/im1.jpg" class="card-img-top img-fixed" alt="Creative Writing Clinic">
+          <div class="card h-100 shadow-sm" data-aos="fade-up" data-aos-delay="200">
+            <img src="images/im4_result_result.webp" class="card-img-top img-fixed" alt="Creative Writing Clinic">
             <div class="card-body text-center">
               <h6 class="card-title fw-bold">Creative Writing Clinic</h6>
               <p class="card-text small">Teens empowered through storytelling and imagination.</p>
@@ -124,8 +224,8 @@
         </div>
 
         <div class="col-md-4">
-          <div class="card h-100 shadow-sm" data-aos="fade-up" data-aos-delay="700">
-            <img src="images/im3.jpg" class="card-img-top img-fixed" alt="Mentoring Session">
+          <div class="card h-100 shadow-sm" data-aos="fade-up" data-aos-delay="300">
+            <img src="images/im3_result_result.webp" class="card-img-top img-fixed" alt="Mentoring Session">
             <div class="card-body text-center">
               <h6 class="card-title fw-bold">Career Coaching & Mentoring</h6>
               <p class="card-text small">Guiding teens at our headquarters to build skills and confidence.</p>
@@ -134,19 +234,19 @@
         </div>
 
         <div class="col-md-4">
-          <div class="card h-100 shadow-sm" data-aos="fade-up" data-aos-delay="800">
-            <img src="images/im5.jpg" class="card-img-top img-fixed" alt="Donation Event">
+          <div class="card h-100 shadow-sm" data-aos="fade-up" data-aos-delay="400">
+            <img src="images/im5_result_result.webp" class="card-img-top img-fixed" alt="Donation Event">
             <div class="card-body text-center">
               <h6 class="card-title fw-bold">Clothing Donation</h6>
               <p class="card-text small">Supporting a rehabilitation centre with essential supplies.</p>
             </div>
           </div>
         </div>
-        <!-- Add more past events here -->
       </div>
+
     </div>
-  </div>
-</section>
+  </section>
+
 
 <footer class="bg-dark text-white pt-3">
   <div class="container">
@@ -165,24 +265,25 @@
 </div>
 
       <!-- Quick Links -->
-      <div class="col-md-4 mb-3">
-        <h5 class="fw-bold">Quick Links</h5>
-        <ul class="list-unstyled">
-          <li><a href="index.html" class="text-white text-decoration-none"><i class="bi bi-house-door me-1"></i>Home</a></li>
-          <li><a href="about.html" class="text-white text-decoration-none"><i class="bi bi-info-circle me-2"></i> About</a></li>
-          <li><a href="program.html" class="text-white text-decoration-none"><i class="bi bi-journal-text me-2"></i> Programs</a></li>
-          <li><a href="donate.html" class="text-white text-decoration-none"><i class="bi bi-heart-fill me-2"></i> Donate</a></li>
-          <li><a href="contact.html" class="text-white text-decoration-none"><i class="bi bi-envelope me-2"></i> Contact</a></li>
-        </ul>
-      </div>
+      <div class="col-md-4 mb-3 footer-links">
+  <h5 class="fw-bold">Quick Links</h5>
+  <ul class="list-unstyled">
+    <li><a href="index.html"><i class="bi bi-house-door me-1"></i> Home</a></li>
+    <li><a href="about.html"><i class="bi bi-info-circle me-2"></i> About</a></li>
+    <li><a href="program.html"><i class="bi bi-journal-text me-2"></i> Programs</a></li>
+    <li><a href="donate.html"><i class="bi bi-heart-fill me-2"></i> Donate</a></li>
+    <li><a href="contact.html"><i class="bi bi-envelope me-2"></i> Contact</a></li>
+    <li><a  href="gallery.html"><i class="bi bi-images me-1"></i>Gallery</a>
+  </ul>
+</div>
 
       <!-- Social Media -->
-      <div class="col-md-4 mb-3">
+    <div class="col-md-4 mb-3 footer-social">
   <h5 class="fw-bold">Follow Us</h5>
-  <a href="https://twitter.com/Write4World" class="text-white me-3 fs-5" target="_blank" rel="noopener">
-    <i class="bi bi-twitter"></i>
+  <a href="https://x.com/Write4worldG?" class="text-white me-3 fs-5" target="_blank" rel="noopener">
+    <i class="bi bi-twitter-x"></i>
   </a>
-  <a href="https://facebook.com/write4worldgh" class="text-white me-3 fs-5" target="_blank" rel="noopener">
+  <a href="https://www.facebook.com/share/17ToMDU2Qe/" class="text-white me-3 fs-5" target="_blank" rel="noopener">
     <i class="bi bi-facebook"></i>
   </a>
   <a href="https://instagram.com/Write4Worldgh" class="text-white me-3 fs-5" target="_blank" rel="noopener">

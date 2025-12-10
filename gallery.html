@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gallery - Write for World</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- GLightbox CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      padding-top: 50px;
+      /* adjust based on your navbar height */
+
+    }
+
+    .donate-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1050;
+      border-radius: 50px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .donate-float:hover {
+      transform: scale(1.05);
+      transition: 0.3s ease;
+    }
+
+    /* Base style for all social icons */
+    .footer-social a {
+      display: inline-block;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    /* Hover effect: enlarge slightly */
+    .footer-social a:hover {
+      transform: scale(1.2);
+    }
+
+    /* Individual platform colors */
+    .footer-social a .bi-twitter:hover {
+      color: #1DA1F2;
+      /* Twitter blue */
+    }
+
+    .footer-social a .bi-facebook:hover {
+      color: #1877F2;
+      /* Facebook blue */
+    }
+
+    .footer-social a .bi-instagram:hover {
+      color: #E4405F;
+      /* Instagram pink */
+    }
+
+    .footer-social a .bi-linkedin:hover {
+      color: #0A66C2;
+      /* LinkedIn blue */
+    }
+
+    /* Quick Links styled as pill buttons */
+    .footer-links a {
+      display: inline-block;
+      margin: 6px 0;
+      padding: 8px 16px;
+      border-radius: 50px;
+      /* pill shape */
+      background-color: rgba(255, 255, 255, 0.1);
+      /* subtle background */
+      color: #ffffff;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    /* Hover effect */
+    .footer-links a:hover {
+      background-color: #ffc107;
+      /* gold highlight */
+      color: #212529;
+      /* dark text for contrast */
+      transform: translateY(-3px);
+      /* slight lift */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .gallery-img {
+      height: 220px;
+      object-fit: cover;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-img:hover {
+      transform: scale(1.05);
+    }
+
+    .filter-btns .btn {
+      margin: 0 5px;
+    }
+  </style>
+</head>
+
+<body class="bg-light">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">
+        <img src="images/ww1_result_result.webp" alt="Write for World Logo" height="40" class="me-2">
+        Write for World
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house-door me-1"></i>Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="program.html"><i
+                class="bi bi-journal-text me-1"></i>Programs</a></li>
+          <li class="nav-item"><a class="nav-link" href="event.html"><i class="bi bi-calendar-event me-1"></i>Events</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="blog.html"><i class="bi bi-newspaper me-1"></i>Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html"><i class="bi bi-info-circle me-1"></i>About</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="contact.html"><i class="bi bi-envelope me-1"></i>Contact</a>
+          </li>
+
+           <li class="nav-item"><a class="nav-link" href="gallery.html"><i class="bi bi-images me-1"></i>Gallery</a>
+          </li>
+          <li class="nav-item ms-lg-3">
+            <a class="btn btn-warning text-dark fw-bold" href="donate.html"><i
+                class="bi bi-envelope me-1"></i>Donate</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Heading -->
+  <section class="py-5 bg-primary text-white text-center">
+    <div class="container">
+      <h2 class="fw-bold">Our Gallery</h2>
+      <p class="lead">Explore highlights from our programs and initiatives</p>
+    </div>
+  </section>
+
+  <!-- Parent Tabs -->
+  <div class="container py-4">
+    <ul class="nav nav-pills justify-content-center mb-4" id="mainGalleryTabs">
+      <li class="nav-item"><a class="nav-link active" data-bs-toggle="pill" href="#economic">Economic Empowerment</a>
+      </li>
+      <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#education">Education & Skills
+          Development</a></li>
+      <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#health">Youth Health & Well-Being</a></li>
+      <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#governance">Youth Participation &
+          Governance</a></li>
+    </ul>
+
+    <div class="tab-content">
+
+      <!-- Economic Empowerment -->
+      <div class="tab-pane fade show active" id="economic">
+        <h4 class="fw-bold mb-3 text-center">Economic Empowerment</h4>
+        <div class="text-center mb-4 filter-btns">
+          <button class="btn btn-outline-primary active" data-filter="*">All</button>
+          <button class="btn btn-outline-primary" data-filter=".capacity">Capacity Building</button>
+          <button class="btn btn-outline-primary" data-filter=".exhibition">Exhibition Fair</button>
+          <button class="btn btn-outline-primary" data-filter=".Official">Official Opening of Vocational Training Center</button>
+          <button class="btn btn-outline-primary" data-filter=".consent">Parent Consent</button>
+          <button class="btn btn-outline-primary" data-filter=".Trainees">Trainers of Trainees</button>
+        </div>
+        <div class="row g-4 gallery-grid">
+          <!-- Example items -->
+          <div class="col-md-4 capacity">
+            <a href="images/Capacity Building_result_result.webp" class="glightbox" data-gallery="economic">
+              <img src="images/Capacity Building_result_result.webp" class="img-fluid gallery-img" alt="Capacity Building">
+            </a>
+            <p class="text-center small mt-2">Capacity Building Workshop</p>
+          </div>
+          <div class="col-md-4 capacity">
+            <a href="images/Capacity Building2_result_result.webp" class="glightbox" data-gallery="economic">
+              <img src="images/Capacity Building2_result_result.webp" class="img-fluid gallery-img" alt="Capacity Building">
+            </a>
+            <p class="text-center small mt-2">Capacity Building Workshop</p>
+          </div>
+          <div class="col-md-4 capacity">
+            <a href="images/Capacity Building3_result_result.webp" class="glightbox" data-gallery="economic">
+              <img src="images/Capacity Building3_result_result.webp" class="img-fluid gallery-img" alt="Capacity Building">
+            </a>
+            <p class="text-center small mt-2">Capacity Building Workshop</p>
+          </div>
+          <div class="col-md-4 capacity">
+            <a href="images/Capacity Building4_result_result.webp" class="glightbox" data-gallery="economic">
+              <img src="images/Capacity Building4_result_result.webp" class="img-fluid gallery-img" alt="Capacity Building">
+            </a>
+            <p class="text-center small mt-2">Capacity Building Workshop</p>
+          </div>
+
+          <div class="col-md-4 capacity">
+            <a href="images/Capacity Building5_result_result.webp" class="glightbox" data-gallery="economic">
+              <img src="images/Capacity Building5_result_result.webp" class="img-fluid gallery-img" alt="Capacity Building">
+            </a>
+            <p class="text-center small mt-2">Capacity Building Workshop</p>
+          </div>
+
+          <div class="col-md-4 exhibition">
+            <a href="images/Exhibition fair and Graduation 3_result_result.webp" class="glightbox" data-gallery="economic">
+              <img src="images/Exhibition fair and Graduation 3_result_result.webp" class="img-fluid gallery-img"
+                alt="Exhibition Fair">
+            </a>
+            <p class="text-center small mt-2">Exhibition Fair</p>
+          </div>
+
+          <div class="col-md-4 exhibition">
+            <a href="images/Exhibition fair and Graduation _result_result.webpn" class="glightbox" data-gallery="economic">
+              <img src="images/Exhibition fair and Graduation _result_result.webp" class="img-fluid gallery-img" alt="Exhibition Fair">
+            </a>
+            <p class="text-center small mt-2">Exhibition Fair</p>
+          </div>
+
+          <div class="col-md-4 exhibition">
+            <a href="images/Exhibition fair and Graduation 2_result_result.webp" class="glightbox" data-gallery="economic">
+              <img src="images/Exhibition fair and Graduation 2_result_result.webp" class="img-fluid gallery-img"
+                alt="Exhibition Fair">
+            </a>
+            <p class="text-center small mt-2">Exhibition Fair</p>
+          </div>
+
+          <div class="col-md-4 exhibition">
+            <a href="images/Exhibition fair and Graduation 4_result_result.webp" class="glightbox" data-gallery="economic">
+              <img src="images/Exhibition fair and Graduation 4_result_result.webp" class="img-fluid gallery-img"
+                alt="Exhibition Fair">
+            </a>
+            <p class="text-center small mt-2">Exhibition Fair</p>
+          </div>
+
+          <div class="col-md-4 exhibition">
+            <a href="images/Exhibition fair and Graduation 5_result_result.webp" class="glightbox" data-gallery="economic">
+              <img src="images/Exhibition fair and Graduation 5_result_result.webp" class="img-fluid gallery-img"
+                alt="Exhibition Fair">
+            </a>
+            <p class="text-center small mt-2">Exhibition Fair</p>
+          </div>
+
+          <div class="col-md-4 Official Opening of Vocational Training Center">
+            <a href="images/Official Opening of Vocational 1_result_result.webp" class="glightbox" data-gallery="economic">
+              <img src="images/Official Opening of Vocational 1_result_result.webp" class="img-fluid gallery-img"
+                alt="Official Opening of Vocational Training Center">
+            </a>
+            <p class="text-center small mt-2">Official Opening of Vocational Training Center</p>
+          </div>
+
+          <div class="col-md-4 Official Opening of Vocational Training Center">
+            <a href="images/Official Opening Of Vocational 2_result_result.webp" class="glightbox" data-gallery="economic">
+              <img src="images/Official Opening Of Vocational 2_result_result.webp" class="img-fluid gallery-img"
+                alt="Official Opening of Vocational Training Center">
+            </a>
+            <p class="text-center small mt-2">Official Opening of Vocational Training Center</p>
+          </div>
+
+          <div class="col-md-4 Official Opening of Vocational Training Center">
+            <a href="images/Official Opening of Vocational 3_result_result.webp" class="glightbox" data-gallery="economic">
+              <img src="images/Official Opening of Vocational 3_result_result.webp" class="img-fluid gallery-img"
+                alt="Official Opening of Vocational Training Center">
+            </a>
+            <p class="text-center small mt-2">Official Opening of Vocational Training Center</p>
+          </div>
+
+          <div class="col-md-4 Official Opening of Vocational Training Center">
+            <a href="images/Official Opening of Vocational 4_result_result.webp" class="glightbox" data-gallery="economic">
+              <img src="images/Official Opening of Vocational 4_result_result.webp" class="img-fluid gallery-img"
+                alt="Official Opening of Vocational Training Center">
+            </a>
+            <p class="text-center small mt-2">Official Opening of Vocational Training Center</p>
+          </div>
+
+          <div class="col-md-4 Official Opening of Vocational Training Center">
+            <a href="images/Official Opening of Vocational 5_result_result.webp" class="glightbox" data-gallery="economic">
+              <img src="images/Official Opening of Vocational 5_result_result.webp" class="img-fluid gallery-img"
+                alt="Official Opening of Vocational Training Center">
+            </a>
+            <p class="text-center small mt-2">Official Opening of Vocational Training Center</p>
+          </div>
+
+          <div class="col-md-4 Parents signs consent form on behalf of their ward for free training">
+            <a href="images/Parents signs consent form on behalf of their ward for free training 1_result_result.webp"
+              class="glightbox" data-gallery="economic">
+              <img src="images/Parents signs consent form on behalf of their ward for free training 1_result_result.webp"
+                class="img-fluid gallery-img"
+                alt="Parents signs consent form on behalf of their ward for free training">
+            </a>
+            <p class="text-center small mt-2">Official Opening of Vocational Training Center</p>
+          </div>
+
+          <div class="col-md-4 Parents signs consent form on behalf of their ward for free training">
+            <a href="images/Parents signs consent form on behalf of their ward for free training 2_result_result.webp"
+              class="glightbox" data-gallery="economic">
+              <img src="images/Parents signs consent form on behalf of their ward for free training 2_result_result.webp"
+                class="img-fluid gallery-img"
+                alt="Parents signs consent form on behalf of their ward for free training">
+            </a>
+            <p class="text-center small mt-2">Official Opening of Vocational Training Center</p>
+          </div>
+
+          <div class="col-md-4 Parents signs consent form on behalf of their ward for free training">
+            <a href="images/Parents signs consent form on behalf of their ward for free training 3_result_result.webp"
+              class="glightbox" data-gallery="economic">
+              <img src="images/Parents signs consent form on behalf of their ward for free training 3_result_result.webp"
+                class="img-fluid gallery-img"
+                alt="Parents signs consent form on behalf of their ward for free training">
+            </a>
+            <p class="text-center small mt-2">Official Opening of Vocational Training Center</p>
+          </div>
+
+          <div class="col-md-4 Parents signs consent form on behalf of their ward for free training">
+            <a href="images/Parents signs consent form on behalf of their ward for free training 4_result_result.webp"
+              class="glightbox" data-gallery="economic">
+              <img src="images/Parents signs consent form on behalf of their ward for free training 4_result_result.webp"
+                class="img-fluid gallery-img"
+                alt="Parents signs consent form on behalf of their ward for free training">
+            </a>
+            <p class="text-center small mt-2">Official Opening of Vocational Training Center</p>
+          </div>
+
+          <div class="col-md-4 Trainers of Trainees">
+            <a href="images/Trainers of Trainee 1_result_result.webp" class="glightbox" data-gallery="economic">
+              <img src="images/Trainers of Trainee 1_result_result.webp" class="img-fluid gallery-img" alt="Trainers of Trainees">
+            </a>
+            <p class="text-center small mt-2">Trainers of Trainees Workshop</p>
+          </div>
+
+          <div class="col-md-4 Trainers of Trainees">
+            <a href="images/Trainers of Trainee 2_result_result.webp" class="glightbox" data-gallery="economic">
+              <img src="images/Trainers of Trainee 2_result_result.webp" class="img-fluid gallery-img" alt="Trainers of Trainees">
+            </a>
+            <p class="text-center small mt-2">Trainers of Trainees Workshop</p>
+          </div>
+
+          <div class="col-md-4 Trainers of Trainees">
+            <a href="images/Trainers of Trainee 3_result_result.webp" class="glightbox" data-gallery="economic">
+              <img src="images/Trainers of Trainee 3_result_result.webp" class="img-fluid gallery-img" alt="Trainers of Trainees">
+            </a>
+            <p class="text-center small mt-2">Trainers of Trainees Workshop</p>
+          </div>
+
+          <div class="col-md-4 Trainers of Trainees">
+            <a href="images/Trainers of Trainee 4_result_result.webp" class="glightbox" data-gallery="economic">
+              <img src="images/Trainers of Trainee 4_result_result.webp" class="img-fluid gallery-img" alt="Trainers of Trainees">
+            </a>
+            <p class="text-center small mt-2">Trainers of Trainees Workshop</p>
+          </div>
+
+          <div class="col-md-4 Trainers of Trainees">
+            <a href="images/Trainers of Trainee 5_result_result.webp" class="glightbox" data-gallery="economic">
+              <img src="images/Trainers of Trainee 5_result_result.webp" class="img-fluid gallery-img" alt="Trainers of Trainees">
+            </a>
+            <p class="text-center small mt-2">Trainers of Trainees Workshop</p>
+          </div>
+
+          <div class="col-md-4 Trainers of Trainees">
+            <a href="images/Trainers of Trainee 6_result_result.webp" class="glightbox" data-gallery="economic">
+              <img src="images/Trainers of Trainee 6_result_result.webp" class="img-fluid gallery-img" alt="Trainers of Trainees">
+            </a>
+            <p class="text-center small mt-2">Trainers of Trainees Workshop</p>
+          </div>
+
+          <div class="col-md-4 Trainers of Trainees">
+            <a href="images/Trainers of Trainee 7_result_result.webp" class="glightbox" data-gallery="economic">
+              <img src="images/Trainers of Trainee 7_result_result.webp" class="img-fluid gallery-img" alt="Trainers of Trainees">
+            </a>
+            <p class="text-center small mt-2">Trainers of Trainees Workshop</p>
+          </div>
+
+          <div class="col-md-4 Trainers of Trainees">
+            <a href="images/Trainers of Trainee 8_result_result.webp" class="glightbox" data-gallery="economic">
+              <img src="images/Trainers of Trainee 8_result_result.webp" class="img-fluid gallery-img" alt="Trainers of Trainees">
+            </a>
+            <p class="text-center small mt-2">Trainers of Trainees Workshop</p>
+          </div>
+
+          <div class="col-md-4 Trainers of Trainees">
+            <a href="images/Trainers of Trainee 9_result_result.webp" class="glightbox" data-gallery="economic">
+              <img src="images/Trainers of Trainee 9_result_result.webp" class="img-fluid gallery-img" alt="Trainers of Trainees">
+            </a>
+            <p class="text-center small mt-2">Trainers of Trainees Workshop</p>
+          </div>
+          <!-- Add graduation, vocational, consent items here -->
+        </div>
+      </div>
+
+      <!-- Education & Skills Development -->
+      <div class="tab-pane fade" id="education">
+        <h4 class="fw-bold mb-3 text-center">Education & Skills Development</h4>
+        <div class="text-center mb-4 filter-btns">
+          <button class="btn btn-outline-primary active" data-filter="*">All</button>
+          <button class="btn btn-outline-primary" data-filter=".Donations">Donations To Students</button>
+          <button class="btn btn-outline-primary" data-filter=".SRHR">SRHR and Creative Writing Club</button>
+          <button class="btn btn-outline-primary" data-filter=".challenge">write for challenge project</button>
+
+        </div>
+        <div class="row g-4 gallery-grid">
+          <!-- Example items -->
+          <div class="col-md-4 Donations To Students">
+            <a href="images/Donation to Students_result_result.webp" class="glightbox" data-gallery="education">
+              <img src="images/Donation to Students_result_result.webp" class="img-fluid gallery-img" alt="Donations to Student">
+            </a>
+            <p class="text-center small mt-2">Write for World Donates to Students</p>
+          </div>
+
+          <div class="col-md-4 Donations To Students">
+            <a href="images/Donations to Students1_result_result.webp" class="glightbox" data-gallery="education">
+              <img src="images/Donations to Students1_result_result.webp" class="img-fluid gallery-img" alt="Donations to Student">
+            </a>
+            <p class="text-center small mt-2">Write for World Donates to Students</p>
+          </div>
+
+          <div class="col-md-4 Donations To Students">
+            <a href="images/Donations to Students 2_result_result.webp" class="glightbox" data-gallery="education">
+              <img src="images/Donations to Students 2_result_result.webp" class="img-fluid gallery-img" alt="Donations to Student">
+            </a>
+            <p class="text-center small mt-2">Write for World Donates to Students</p>
+          </div>
+
+          <div class="col-md-4 Donations To Students">
+            <a href="images/Donations to Students 3_result_result.webp" class="glightbox" data-gallery="education">
+              <img src="images/Donations to Students 3_result_result.webp" class="img-fluid gallery-img" alt="Donations to Student">
+            </a>
+            <p class="text-center small mt-2">Write for World Donates to Students</p>
+          </div>
+
+          <div class="col-md-4 Donations To Students">
+            <a href="images/Donations to Students 4_result_result.webp" class="glightbox" data-gallery="education">
+              <img src="images/Donations to Students 4_result_result.webp" class="img-fluid gallery-img" alt="Donations to Student">
+            </a>
+            <p class="text-center small mt-2">Write for World Donates to Students</p>
+          </div>
+
+          <div class="col-md-4 Donations To Students">
+            <a href="images/Donations to Students 5_result_result.webp" class="glightbox" data-gallery="education">
+              <img src="images/Donations to Students 5_result_result.webp" class="img-fluid gallery-img" alt="Donations to Student">
+            </a>
+            <p class="text-center small mt-2">Write for World Donates to Students</p>
+          </div>
+
+          <div class="col-md-4 Donations To Students">
+            <a href="images/Donations to Students 6_result_result.webp" class="glightbox" data-gallery="education">
+              <img src="images/Donations to Students 6_result_result.webp" class="img-fluid gallery-img" alt="Donations to Student">
+            </a>
+            <p class="text-center small mt-2">Write for World Donates to Students</p>
+          </div>
+
+          <div class="col-md-4 Donations To Students">
+            <a href="images/Donations to Students 7_result_result.webp" class="glightbox" data-gallery="education">
+              <img src="images/Donations to Students 7_result_result.webp" class="img-fluid gallery-img" alt="Donations to Student">
+            </a>
+            <p class="text-center small mt-2">Write for World Donates to Students</p>
+          </div>
+
+          <div class="col-md-4 Donations To Students">
+            <a href="images/Donations to Students 8_result_result.webp" class="glightbox" data-gallery="education">
+              <img src="images/Donations to Students 8_result_result.webp" class="img-fluid gallery-img" alt="Donations to Student">
+            </a>
+            <p class="text-center small mt-2">Write for World Donates to Students</p>
+          </div>
+
+          <div class="col-md-4 Donations To Students">
+            <a href="images/Donations to Students 9_result_result.webp" class="glightbox" data-gallery="education">
+              <img src="images/Donations to Students 9_result_result.webp" class="img-fluid gallery-img" alt="Donations to Student">
+            </a>
+            <p class="text-center small mt-2">Write for World Donates to Students</p>
+          </div>
+
+          <div class="col-md-4 Donations To Students">
+            <a href="images/Donations to Students 10_result_result.webp" class="glightbox" data-gallery="education">
+              <img src="images/Donations to Students 10_result_result.webp" class="img-fluid gallery-img" alt="Donations to Student">
+            </a>
+            <p class="text-center small mt-2">Write for World Donates to Students</p>
+          </div>
+
+          <div class="col-md-4 Donations To Students">
+            <a href="images/Donations to Students 11_result_result.webp" class="glightbox" data-gallery="education">
+              <img src="images/Donations to Students 11.JPG" class="img-fluid gallery-img" alt="Donations to Student">
+            </a>
+            <p class="text-center small mt-2">Write for World Donates to Students</p>
+          </div>
+
+          <div class="col-md-4 Donations To Students">
+            <a href="images/Donations to Students 12_result_result.webp" class="glightbox" data-gallery="education">
+              <img src="images/Donations to Students 12_result_result.webp" class="img-fluid gallery-img" alt="Donations to Student">
+            </a>
+            <p class="text-center small mt-2">Write for World Donates to Students</p>
+          </div>
+
+          <div class="col-md-4 Donations To Students">
+            <a href="images/Donations to Students 13_result_result.webp" class="glightbox" data-gallery="education">
+              <img src="images/Donations to Students 13_result_result.webp" class="img-fluid gallery-img" alt="Donations to Student">
+            </a>
+            <p class="text-center small mt-2">Write for World Donates to Students</p>
+          </div>
+
+          <div class="col-md-4 Donations To Students">
+            <a href="images/Donations to Students 14_result_result.webp" class="glightbox" data-gallery="education">
+              <img src="images/Donations to Students 14_result_result.webp" class="img-fluid gallery-img" alt="Donations to Student">
+            </a>
+            <p class="text-center small mt-2">Write for World Donates to Students</p>
+          </div>
+
+          <div class="col-md-4 Donations To Students">
+            <a href="images/Donations to Students 15_result_result.webp" class="glightbox" data-gallery="education">
+              <img src="images/Donations to Students 15_result_result.webp" class="img-fluid gallery-img" alt="Donations to Student">
+            </a>
+            <p class="text-center small mt-2">Write for World Donates to Students</p>
+          </div>
+
+          <div class="col-md-4 Donations To Students">
+            <a href="images/Donations to Students 16_result_result.webp" class="glightbox" data-gallery="education">
+              <img src="images/Donations to Students 16_result_result.webp" class="img-fluid gallery-img" alt="Donations to Student">
+            </a>
+            <p class="text-center small mt-2">Write for World Donates to Students</p>
+          </div>
+          <div class="col-md-4 Donations To Students">
+            <a href="images/Donations to Students 16_result_result.webp" class="glightbox" data-gallery="education">
+              <img src="images/Donations to Students 16_result_result.webp" class="img-fluid gallery-img" alt="Donations to Student">
+            </a>
+            <p class="text-center small mt-2">Write for World Donates to Students</p>
+          </div>
+
+          <div class="col-md-4 Donations To Students">
+            <a href="images/Donations to Students 17_result_result.webp" class="glightbox" data-gallery="education">
+              <img src="images/Donations to Students 17_result_result.webp" class="img-fluid gallery-img" alt="Donations to Student">
+            </a>
+            <p class="text-center small mt-2">Write for World Donates to Students</p>
+          </div>
+
+          <div class="col-md-4 SRHR & Creative Writing Club">
+            <a href="images/SRHR & Creative Writing Club 1_result_result.webp" class="glightbox" data-gallery="education">
+              <img src="images/SRHR & Creative Writing Club 1_result_result.webp" class="img-fluid gallery-img"
+                alt="SRHR & Creative Writing Club">
+            </a>
+            <p class="text-center small mt-2">SRHR & Creative Writing Club</p>
+          </div>
+
+          <div class="col-md-4 SRHR & Creative Writing Club">
+            <a href="images/SRHR & Creative Writing Club 2_result_result.webp" class="glightbox" data-gallery="education">
+              <img src="images/SRHR & Creative Writing Club 2_result_result.webp" class="img-fluid gallery-img"
+                alt="SRHR & Creative Writing Club">
+            </a>
+            <p class="text-center small mt-2">SRHR & Creative Writing Club</p>
+          </div>
+
+          <div class="col-md-4 SRHR & Creative Writing Club">
+            <a href="images/SRHR & Creative Writing Club 3_result_result.webp" class="glightbox" data-gallery="education">
+              <img src="images/SRHR & Creative Writing Club 3_result_result.webp" class="img-fluid gallery-img"
+                alt="SRHR & Creative Writing Club">
+            </a>
+            <p class="text-center small mt-2">SRHR & Creative Writing Club</p>
+          </div>
+
+          <div class="col-md-4 SRHR & Creative Writing Club">
+            <a href="images/SRHR & Creative Writing Club 4_result_result.webp" class="glightbox" data-gallery="education">
+              <img src="images/SRHR & Creative Writing Club 4_result_result.webp" class="img-fluid gallery-img"
+                alt="SRHR & Creative Writing Club">
+            </a>
+            <p class="text-center small mt-2">SRHR & Creative Writing Club</p>
+          </div>
+
+          <div class="col-md-4 SRHR & Creative Writing Club">
+            <a href="images/SRHR & Creative Writing Club 5_result_result.webp" class="glightbox" data-gallery="education">
+              <img src="images/SRHR & Creative Writing Club 5_result_result.webp" class="img-fluid gallery-img"
+                alt="SRHR & Creative Writing Club">
+            </a>
+            <p class="text-center small mt-2">SRHR & Creative Writing Club</p>
+          </div>
+
+          <div class="col-md-4 SRHR & Creative Writing Club">
+            <a href="images/SRHR & Creative Writing Club 6_result_result.webp" class="glightbox" data-gallery="education">
+              <img src="images/SRHR & Creative Writing Club 6_result_result.webp" class="img-fluid gallery-img"
+                alt="SRHR & Creative Writing Club">
+            </a>
+            <p class="text-center small mt-2">SRHR & Creative Writing Club</p>
+          </div>
+
+          <div class="col-md-4 SRHR & Creative Writing Club">
+            <a href="images/SRHR & Creative Writing Club 7_result_result.webp" class="glightbox" data-gallery="education">
+              <img src="images/SRHR & Creative Writing Club 7_result_result.webp" class="img-fluid gallery-img"
+                alt="SRHR & Creative Writing Club">
+            </a>
+            <p class="text-center small mt-2">SRHR & Creative Writing Club</p>
+          </div>
+
+          <div class="col-md-4 SRHR & Creative Writing Club">
+            <a href="images/SRHR & Creative Writing Club 8_result_result.webp" class="glightbox" data-gallery="education">
+              <img src="images/SRHR & Creative Writing Club 8_result_result.webp" class="img-fluid gallery-img"
+                alt="SRHR & Creative Writing Club">
+            </a>
+            <p class="text-center small mt-2">SRHR & Creative Writing Club</p>
+          </div>
+
+          <div class="col-md-4 SRHR & Creative Writing Club">
+            <a href="images/SRHR & Creative Writing Club 9_result_result.webp" class="glightbox" data-gallery="education">
+              <img src="images/SRHR & Creative Writing Club 9_result_result.webp" class="img-fluid gallery-img"
+                alt="SRHR & Creative Writing Club">
+            </a>
+            <p class="text-center small mt-2">SRHR & Creative Writing Club</p>
+          </div>
+
+          <div class="col-md-4 SRHR & Creative Writing Club">
+            <a href="images/SRHR & Creative Writing Club 10_result_result.webp" class="glightbox" data-gallery="education">
+              <img src="images/SRHR & Creative Writing Club 10_result_result.webp" class="img-fluid gallery-img"
+                alt="SRHR & Creative Writing Club">
+            </a>
+            <p class="text-center small mt-2">SRHR & Creative Writing Club</p>
+          </div>
+
+          <div class="col-md-4 write for challenge project">
+            <a href="images/write for challenge project 1_result_result.webp" class="glightbox" data-gallery="education">
+              <img src="images/write for challenge project 1_result_result.webp" class="img-fluid gallery-img"
+                alt="write for challenge project">
+            </a>
+            <p class="text-center small mt-2">write for challenge project for teens</p>
+          </div>
+
+          <div class="col-md-4 write for challenge project">
+            <a href="images/write for challenge project 2_result_result.webp" class="glightbox" data-gallery="education">
+              <img src="images/write for challenge project 2_result_result.webp" class="img-fluid gallery-img"
+                alt="write for challenge project">
+            </a>
+            <p class="text-center small mt-2">write for challenge project for teens</p>
+          </div>
+
+          <div class="col-md-4 write for challenge project">
+            <a href="images/write for challenge project 3_result_result.webp" class="glightbox" data-gallery="education">
+              <img src="images/write for challenge project 3_result_result.webp" class="img-fluid gallery-img"
+                alt="write for challenge project">
+            </a>
+            <p class="text-center small mt-2">write for challenge project for teens</p>
+          </div>
+
+          <div class="col-md-4 write for challenge project">
+            <a href="images/write for challenge project 4_result_result.webp" class="glightbox" data-gallery="education">
+              <img src="images/write for challenge project 4_result_result.webp" class="img-fluid gallery-img"
+                alt="write for challenge project">
+            </a>
+            <p class="text-center small mt-2">write for challenge project for teens</p>
+          </div>
+
+          <div class="col-md-4 write for challenge project">
+            <a href="images/write for challenge project 5_result_result.webp" class="glightbox" data-gallery="education">
+              <img src="images/write for challenge project 5_result_result.webp" class="img-fluid gallery-img"
+                alt="write for challenge project">
+            </a>
+            <p class="text-center small mt-2">write for challenge project for teens</p>
+          </div>
+
+
+        </div>
+      </div>
+
+
+
+      <!-- Youth Health & Well-Being -->
+      <div class="tab-pane fade" id="health">
+        <h4 class="fw-bold mb-3 text-center">Youth Health & Well-Being</h4>
+        <div class="text-center mb-4 filter-btns">
+          <button class="btn btn-outline-primary active" data-filter="*">All</button>
+          <button class="btn btn-outline-primary" data-filter=".Community">Health Clinics And Awareness
+            Campaigns</button>
+          <button class="btn btn-outline-primary" data-filter=".leaisure">Youth Tour</button>
+        </div>
+        <div class="row g-4 gallery-grid">
+          <div class="col-md-4 Community">
+            <a href="images/Community Entry, Engagement and Sanitazation_result_result.webp" class="glightbox" data-gallery="health">
+              <img src="images/Community Entry, Engagement and Sanitazation_result_result.webp" class="img-fluid gallery-img"
+                alt="Community Entry, Engagement and Sanitazation">
+            </a>
+            <p class="text-center small mt-2">Health Clinics And Awareness Campaigns</p>
+          </div>
+
+          <div class="col-md-4 Community">
+            <a href="images/Community Entry, Engagement and Sanitazation 2_result_result.webp" class="glightbox" data-gallery="health">
+              <img src="images/Community Entry, Engagement and Sanitazation 2_result_result.webp" class="img-fluid gallery-img"
+                alt="Community Entry, Engagement and Sanitazation">
+            </a>
+            <p class="text-center small mt-2">Health Clinics And Awareness Campaigns</p>
+          </div>
+
+          <div class="col-md-4 Community">
+            <a href="images/Community Entry, Engagement and Sanitazation 3_result_result.webp" class="glightbox" data-gallery="health">
+              <img src="images/Community Entry, Engagement and Sanitazation 3_result_result.webp" class="img-fluid gallery-img"
+                alt="Community Entry, Engagement and Sanitazation">
+            </a>
+            <p class="text-center small mt-2">Health Clinics And Awareness Campaigns</p>
+          </div>
+
+          <div class="col-md-4 Community">
+            <a href="images/Community Entry, Engagement and Sanitazation 4_result_result.webp" class="glightbox" data-gallery="health">
+              <img src="images/Community Entry, Engagement and Sanitazation 4_result_result.webp" class="img-fluid gallery-img"
+                alt="Community Entry, Engagement and Sanitazation">
+            </a>
+            <p class="text-center small mt-2">Health Clinics And Awareness Campaigns</p>
+          </div>
+
+          <div class="col-md-4 Community">
+            <a href="images/Community Entry, Engagement and Sanitazation 5_result_result.webp" class="glightbox" data-gallery="health">
+              <img src="images/Community Entry, Engagement and Sanitazation 5_result_result.webp" class="img-fluid gallery-img"
+                alt="Community Entry, Engagement and Sanitazation">
+            </a>
+            <p class="text-center small mt-2">Health Clinics And Awareness Campaigns</p>
+          </div>
+
+          <div class="col-md-4 Community">
+            <a href="images/Community Entry, Engagement and Sanitazation 6_result_result.webp" class="glightbox" data-gallery="health">
+              <img src="images/Community Entry, Engagement and Sanitazation 6_result_result.webp" class="img-fluid gallery-img"
+                alt="Community Entry, Engagement and Sanitazation">
+            </a>
+            <p class="text-center small mt-2">Health Clinics And Awareness Campaigns</p>
+          </div>
+
+          <div class="col-md-4 Community">
+            <a href="images/Community Entry, Engagement and Sanitazation 7_result_result.webp" class="glightbox" data-gallery="health">
+              <img src="images/Community Entry, Engagement and Sanitazation 7_result_result.webp" class="img-fluid gallery-img"
+                alt="Community Entry, Engagement and Sanitazation">
+            </a>
+            <p class="text-center small mt-2">Health Clinics And Awareness Campaigns</p>
+          </div>
+
+          <div class="col-md-4 Community">
+            <a href="images/Community Entry, Engagement and Sanitazation 8_result_result.webp" class="glightbox" data-gallery="health">
+              <img src="images/Community Entry, Engagement and Sanitazation 8_result_result.webp" class="img-fluid gallery-img"
+                alt="Community Entry, Engagement and Sanitazation">
+            </a>
+            <p class="text-center small mt-2">Health Clinics And Awareness Campaigns</p>
+          </div>
+
+          <div class="col-md-4 Community">
+            <a href="images/Community Entry, Engagement and Sanitazation 9_result_result.webp" class="glightbox" data-gallery="health">
+              <img src="images/Community Entry, Engagement and Sanitazation 9_result_result.webp" class="img-fluid gallery-img"
+                alt="Community Entry, Engagement and Sanitazation">
+            </a>
+            <p class="text-center small mt-2">Health Clinics And Awareness Campaigns</p>
+          </div>
+
+          <div class="col-md-4 Community">
+            <a href="images/Community Entry, Engagement and Sanitazation 10_result_result.webp" class="glightbox"
+              data-gallery="health">
+              <img src="images/Community Entry, Engagement and Sanitazation 10_result_result.webp" class="img-fluid gallery-img"
+                alt="Community Entry, Engagement and Sanitazation">
+            </a>
+            <p class="text-center small mt-2">Health Clinics And Awareness Campaigns</p>
+          </div>
+
+          <div class="col-md-4 Community">
+            <a href="images/Community Entry, Engagement and Sanitazation 11_result_result.webp" class="glightbox"
+              data-gallery="health">
+              <img src="images/Community Entry, Engagement and Sanitazation 11_result_result.webp" class="img-fluid gallery-img"
+                alt="Community Entry, Engagement and Sanitazation">
+            </a>
+            <p class="text-center small mt-2">Health Clinics And Awareness Campaigns</p>
+          </div>
+
+          <div class="col-md-4 Community">
+            <a href="images/Community Entry, Engagement and Sanitazation 12_result_result.webp" class="glightbox"
+              data-gallery="health">
+              <img src="images/Community Entry, Engagement and Sanitazation 12_result_result.webp" class="img-fluid gallery-img"
+                alt="Community Entry, Engagement and Sanitazation">
+            </a>
+            <p class="text-center small mt-2">Health Clinics And Awareness Campaigns</p>
+          </div>
+
+          <div class="col-md-4 Community">
+            <a href="images/Community Entry, Engagement and Sanitazation 13_result_result.webp" class="glightbox"
+              data-gallery="health">
+              <img src="images/Community Entry, Engagement and Sanitazation 13_result_result.webp" class="img-fluid gallery-img"
+                alt="Community Entry, Engagement and Sanitazation">
+            </a>
+            <p class="text-center small mt-2">Health Clinics And Awareness Campaigns</p>
+          </div>
+
+          <div class="col-md-4 Community">
+            <a href="images/Community Entry, Engagement and Sanitazation 14_result_result.webp" class="glightbox"
+              data-gallery="health">
+              <img src="images/Community Entry, Engagement and Sanitazation 14_result_result.webp" class="img-fluid gallery-img"
+                alt="Community Entry, Engagement and Sanitazation">
+            </a>
+            <p class="text-center small mt-2">Health Clinics And Awareness Campaigns</p>
+          </div>
+
+          <div class="col-md-4 Community">
+            <a href="images/Community Entry, Engagement and Sanitazation 15_result_result.webp" class="glightbox"
+              data-gallery="health">
+              <img src="images/Community Entry, Engagement and Sanitazation 15_result_result.webp" class="img-fluid gallery-img"
+                alt="Community Entry, Engagement and Sanitazation">
+            </a>
+            <p class="text-center small mt-2">Health Clinics And Awareness Campaigns</p>
+          </div>
+
+          <div class="col-md-4 leaisure">
+            <a href="images/Encourage Learnig among teens amidst leaisure 1_result_result.webp" class="glightbox"
+              data-gallery="health">
+              <img src="images/Encourage Learnig among teens amidst leaisure 1_result_result.webp" class="img-fluid gallery-img"
+                alt="Encourage Learnig among teens amidst leaisure">
+            </a>
+            <p class="text-center small mt-2">We Encourage Learnig among teens amidst leaisure</p>
+          </div>
+
+          <div class="col-md-4 leaisure">
+            <a href="images/Encourage Learnig among teens amidst leaisure 2_result_result.webp" class="glightbox"
+              data-gallery="health">
+              <img src="images/Encourage Learnig among teens amidst leaisure 2_result_result.webp" class="img-fluid gallery-img"
+                alt="Encourage Learnig among teens amidst leaisure">
+            </a>
+            <p class="text-center small mt-2">We Encourage Learnig among teens amidst leaisure</p>
+          </div>
+
+          <div class="col-md-4 leaisure">
+            <a href="images/Encourage Learnig among teens amidst leaisure 3_result_result.webp" class="glightbox"
+              data-gallery="health">
+              <img src="images/Encourage Learnig among teens amidst leaisure 3_result_result.webp" class="img-fluid gallery-img"
+                alt="Encourage Learnig among teens amidst leaisure">
+            </a>
+            <p class="text-center small mt-2">We Encourage Learnig among teens amidst leaisure</p>
+          </div>
+
+          <div class="col-md-4 leaisure">
+            <a href="images/Encourage Learnig among teens amidst leaisure 4_result_result.webp" class="glightbox"
+              data-gallery="health">
+              <img src="images/Encourage Learnig among teens amidst leaisure 4_result_result.webp" class="img-fluid gallery-img"
+                alt="Encourage Learnig among teens amidst leaisure">
+            </a>
+            <p class="text-center small mt-2">We Encourage Learnig among teens amidst leaisure</p>
+          </div>
+
+          <div class="col-md-4 leaisure">
+            <a href="images/Encourage Learnig among teens amidst leaisure 5_result_result.webp" class="glightbox"
+              data-gallery="health">
+              <img src="images/Encourage Learnig among teens amidst leaisure 5_result_result.webp" class="img-fluid gallery-img"
+                alt="Encourage Learnig among teens amidst leaisure">
+            </a>
+            <p class="text-center small mt-2">We Encourage Learnig among teens amidst leaisure</p>
+          </div>
+
+          <div class="col-md-4 leaisure">
+            <a href="images/Encourage Learnig among teens amidst leaisure 6_result_result.webp" class="glightbox"
+              data-gallery="health">
+              <img src="images/Encourage Learnig among teens amidst leaisure 6_result_result.webp" class="img-fluid gallery-img"
+                alt="Encourage Learnig among teens amidst leaisure">
+            </a>
+            <p class="text-center small mt-2">We Encourage Learnig among teens amidst leaisure</p>
+          </div>
+
+          <div class="col-md-4 leaisure">
+            <a href="images/Encourage Learnig among teens amidst leaisure 7_result_result.webp" class="glightbox"
+              data-gallery="health">
+              <img src="images/Encourage Learnig among teens amidst leaisure 7_result_result.webp" class="img-fluid gallery-img"
+                alt="Encourage Learnig among teens amidst leaisure">
+            </a>
+            <p class="text-center small mt-2">We Encourage Learnig among teens amidst leaisure</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Youth Participation & Governance -->
+      <div class="tab-pane fade" id="governance">
+        <h4 class="fw-bold mb-3 text-center">Youth Participation & Governance</h4>
+        <div class="text-center mb-4 filter-btns">
+          <button class="btn btn-outline-primary active" data-filter="*">All</button>
+          <button class="btn btn-outline-primary" data-filter=".Tertiary">Leadership Training</button>
+          <button class="btn btn-outline-primary" data-filter=".Others">Others</button>
+        </div>
+        <div class="row g-4 gallery-grid">
+          <div class="col-md-4 Tertiary">
+            <a href="images/Tertiary Campus Outreach Project 1_result_result.webp" class="glightbox" data-gallery="governance">
+              <img src="images/Tertiary Campus Outreach Project 1_result_result.webp" class="img-fluid gallery-img"
+                alt="Tertiary Campus Outreach Project">
+            </a>
+            <p class="text-center small mt-2">Tertiary Campus Outreach Project</p>
+          </div>
+
+          <div class="col-md-4 Tertiary">
+            <a href="images/Tertiary Campus Outreach Project 2_result_result.webp" class="glightbox" data-gallery="governance">
+              <img src="images/Tertiary Campus Outreach Project 2_result_result.webp" class="img-fluid gallery-img"
+                alt="Tertiary Campus Outreach Project">
+            </a>
+            <p class="text-center small mt-2">Tertiary Campus Outreach Project</p>
+          </div>
+
+          <div class="col-md-4 Tertiary">
+            <a href="images/Tertiary Campus Outreach Project 3_result_result.webp" class="glightbox" data-gallery="governance">
+              <img src="images/Tertiary Campus Outreach Project 3_result_result.webp" class="img-fluid gallery-img"
+                alt="Tertiary Campus Outreach Project">
+            </a>
+            <p class="text-center small mt-2">Tertiary Campus Outreach Project</p>
+          </div>
+
+          <div class="col-md-4 Tertiary">
+            <a href="images/Tertiary Campus Outreach Project 4_result_result.webp" class="glightbox" data-gallery="governance">
+              <img src="images/Tertiary Campus Outreach Project 4_result_result.webp" class="img-fluid gallery-img"
+                alt="Tertiary Campus Outreach Project">
+            </a>
+            <p class="text-center small mt-2">Tertiary Campus Outreach Project</p>
+          </div>
+
+          <div class="col-md-4 Tertiary">
+            <a href="images/Tertiary Campus Outreach Project 5_result_result.webp" class="glightbox" data-gallery="governance">
+              <img src="images/Tertiary Campus Outreach Project 5_result_result.webp" class="img-fluid gallery-img"
+                alt="Tertiary Campus Outreach Project">
+            </a>
+            <p class="text-center small mt-2">Tertiary Campus Outreach Project</p>
+          </div>
+
+          <div class="col-md-4 Tertiary">
+            <a href="images/Tertiary Campus Outreach Project 6_result_result.webp" class="glightbox" data-gallery="governance">
+              <img src="images/Tertiary Campus Outreach Project 6_result_result.webp" class="img-fluid gallery-img"
+                alt="Tertiary Campus Outreach Project">
+            </a>
+            <p class="text-center small mt-2">Tertiary Campus Outreach Project</p>
+          </div>
+
+          <div class="col-md-4 Tertiary">
+            <a href="images/Tertiary Campus Outreach Project 7_result_result.webp" class="glightbox" data-gallery="governance">
+              <img src="images/Tertiary Campus Outreach Project 7_result_result.webp" class="img-fluid gallery-img"
+                alt="Tertiary Campus Outreach Project">
+            </a>
+            <p class="text-center small mt-2">Tertiary Campus Outreach Project</p>
+          </div>
+
+          <div class="col-md-4 Tertiary">
+            <a href="images/Tertiary Campus Outreach Project 8_result_result.webp" class="glightbox" data-gallery="governance">
+              <img src="images/Tertiary Campus Outreach Project 8_result_result.webp" class="img-fluid gallery-img"
+                alt="Tertiary Campus Outreach Project">
+            </a>
+            <p class="text-center small mt-2">Tertiary Campus Outreach Project</p>
+          </div>
+
+          <div class="col-md-4 Tertiary">
+            <a href="images/Tertiary Campus Outreach Project 9_result_result.webp" class="glightbox" data-gallery="governance">
+              <img src="images/Tertiary Campus Outreach Project 9_result_result.webp" class="img-fluid gallery-img"
+                alt="Tertiary Campus Outreach Project">
+            </a>
+            <p class="text-center small mt-2">Tertiary Campus Outreach Project</p>
+          </div>
+
+          <div class="col-md-4 Tertiary">
+            <a href="images/Tertiary Campus Outreach Project 10_result_result.webp" class="glightbox" data-gallery="governance">
+              <img src="images/Tertiary Campus Outreach Project 10_result_result.webp" class="img-fluid gallery-img"
+                alt="Tertiary Campus Outreach Project">
+            </a>
+            <p class="text-center small mt-2">Tertiary Campus Outreach Project</p>
+          </div>
+
+          <div class="col-md-4 Tertiary">
+            <a href="images/Tertiary Campus Outreach Project 11_result_result.webp" class="glightbox" data-gallery="governance">
+              <img src="images/Tertiary Campus Outreach Project 11_result_result.webp" class="img-fluid gallery-img"
+                alt="Tertiary Campus Outreach Project">
+            </a>
+            <p class="text-center small mt-2">Tertiary Campus Outreach Project</p>
+          </div>
+
+          <div class="col-md-4 Tertiary">
+            <a href="images/Tertiary Campus Outreach Project 12_result_result.webp" class="glightbox" data-gallery="governance">
+              <img src="images/Tertiary Campus Outreach Project 12_result_result.webp" class="img-fluid gallery-img"
+                alt="Tertiary Campus Outreach Project">
+            </a>
+            <p class="text-center small mt-2">Tertiary Campus Outreach Project</p>
+          </div>
+
+          <div class="col-md-4 Others">
+            <a href="images/After a Focused Group Discussion with MDF West Africa_result_result.webp" class="glightbox"
+              data-gallery="governance">
+              <img src="images/After a Focused Group Discussion with MDF West Africa_result_result.webp" class="img-fluid gallery-img"
+                alt="After a Focused Group Discussion with MDF West Africa">
+            </a>
+            <p class="text-center small mt-2">After a Focused Group Discussion with MDF West Africa</p>
+          </div>
+
+          <div class="col-md-4 Others">
+            <a href="images/Joint Working Visit by some Staff of NGO Secretariat, Accra and Social Welfare Office, Ho_result_result.webp"
+              class="glightbox" data-gallery="governance">
+              <img
+                src="images/Joint Working Visit by some Staff of NGO Secretariat, Accra and Social Welfare Office, Ho_result_result.webp"
+                class="img-fluid gallery-img"
+                alt="Joint Working Visit by some Staff of NGO Secretariat, Accra and Social Welfare Office, Ho">
+            </a>
+            <p class="text-center small mt-2">Joint Working Visit by some Staff of NGO Secretariat, Accra and Social
+              Welfare Office, Ho</p>
+          </div>
+
+          <div class="col-md-4 Others">
+            <a href="images/Meeting of some Youth Led Groups organised by Plan Int. Ghana_result_result.webp" class="glightbox"
+              data-gallery="governance">
+              <img src="images/Meeting of some Youth Led Groups organised by Plan Int. Ghana_result_result.webp"
+                class="img-fluid gallery-img" alt="Meeting of some Youth Led Groups organised by Plan Int. Ghana">
+            </a>
+            <p class="text-center small mt-2">Meeting of some Youth Led Groups organised by Plan Int. Ghana</p>
+          </div>
+
+          <div class="col-md-4 Others">
+            <a href="images/Project Team in a Meeting at W4W Office_result_result.webp" class="glightbox" data-gallery="governance">
+              <img src="images/Project Team in a Meeting at W4W Office_result_result.webp" class="img-fluid gallery-img"
+                alt="Project Team in a Meeting at W4W Office">
+            </a>
+            <p class="text-center small mt-2">Project Team in a Meeting at W4W Office</p>
+          </div>
+
+          <div class="col-md-4 Others">
+            <a href="images/W4W Team in a Pose with Country Director of Plan Int. Ghana and other Heads of State Agencies_result_result.webp"
+              class="glightbox" data-gallery="governance">
+              <img
+                src="images/W4W Team in a Pose with Country Director of Plan Int. Ghana and other Heads of State Agencies_result_result.webp"
+                class="img-fluid gallery-img"
+                alt="W4W Team in a Pose with Country Director of Plan Int. Ghana and other Heads of State Agencies">
+            </a>
+            <p class="text-center small mt-2">W4W Team in a Pose with Country Director of Plan Int. Ghana and other
+              Heads of State Agencies</p>
+          </div>
+
+          <div class="col-md-4 Others">
+            <a href="images/Some W4W Project Team Members_result_result.webp" class="glightbox" data-gallery="governance">
+              <img src="images/Some W4W Project Team Members_result_result.webp" class="img-fluid gallery-img"
+                alt="Some W4W Project Team Members">
+            </a>
+            <p class="text-center small mt-2">Some W4W Project Team Members</p>
+          </div>
+
+          <div class="col-md-4 Others">
+            <a href="images/Working visit by some Plan Int. Ghana staff_result_result.webp" class="glightbox"
+              data-gallery="governance">
+              <img src="images/Working visit by some Plan Int. Ghana staff_result_result.webp" class="img-fluid gallery-img"
+                alt="Working visit by some Plan Int. Ghana staff">
+            </a>
+            <p class="text-center small mt-2">Working visit by some Plan Int. Ghana staff</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- Floating Donate Button -->
+<a href="donate.html" class="btn btn-warning fw-bold donate-float">
+  <i class="bi bi-heart-fill me-1"></i> Donate
+</a>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white pt-3">
+    <div class="container">
+      <div class="row text-center text-md-start">
+
+        <!-- Contact Details -->
+        <div class="col-md-4 mb-3">
+          <h5 class="fw-bold">CONTACT US</h5>
+          <p><i class="bi bi-building me-2"></i> Head Office: Opposite Ghana Water Company Limited, Ho - V/R Ghana</p>
+          <p><i class="bi bi-geo-alt-fill me-2"></i> Address: P.O. Box HP 361, Ho – Volta Region, Ghana, West Africa</p>
+          <p><i class="bi bi-map me-2"></i> Digital Address: VH-4001-3748</p>
+          <p><i class="bi bi-envelope-fill me-2"></i> Email: info@writeforworld.org / write4worldgh@gmail.com</p>
+          <p><i class="bi bi-globe me-2"></i> Website: <a href="https://www.writeforworld.org"
+              class="text-white text-decoration-none">www.writeforworld.org</a></p>
+          <p><i class="bi bi-telephone-fill me-2"></i> Telephone: 0362295806</p>
+          <p><i class="bi bi-phone-fill me-2"></i> Mobile Phone: 0593032627</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-md-4 mb-3 footer-links">
+          <h5 class="fw-bold">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html"><i class="bi bi-house-door me-1"></i> Home</a></li>
+            <li><a href="about.html"><i class="bi bi-info-circle me-2"></i> About</a></li>
+            <li><a href="program.html"><i class="bi bi-journal-text me-2"></i> Programs</a></li>
+            <li><a href="donate.html"><i class="bi bi-heart-fill me-2"></i> Donate</a></li>
+            <li><a href="contact.html"><i class="bi bi-envelope me-2"></i> Contact</a></li>
+            <li><a  href="gallery.html"><i class="bi bi-images me-1"></i>Gallery</a></li>
+          </ul>
+        </div>
+
+        <!-- Social Media -->
+        <div class="col-md-4 mb-3">
+          <h5 class="fw-bold">Follow Us</h5>
+          <a href="https://x.com/Write4worldG?" class="text-white me-3 fs-5" target="_blank" rel="noopener">
+            <i class="bi bi-twitter-x"></i>
+          </a>
+          <a href="https://www.facebook.com/share/17ToMDU2Qe/" class="text-white me-3 fs-5" target="_blank"
+            rel="noopener">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="https://instagram.com/Write4Worldgh" class="text-white me-3 fs-5" target="_blank" rel="noopener">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/company/write4world" class="text-white me-3 fs-5" target="_blank"
+            rel="noopener">
+            <i class="bi bi-linkedin"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="text-center mt-3 border-top border-light pt-3">
+        <p class="mb-0">&copy; 2025 Write for World. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- GLightbox JS -->
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <!-- Isotope JS -->
+  <script src="https://cdn.jsdelivr.net/npm/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+
+  <script>
+    // Initialize GLightbox
+    const lightbox = GLightbox({ selector: '.glightbox' });
+
+    // Initialize Isotope for each gallery grid
+    document.querySelectorAll('.gallery-grid').forEach(grid => {
+      var iso = new Isotope(grid, {
+        itemSelector: '.col-md-4',
+        layoutMode: 'fitRows'
+      });
+
+      // Filter buttons inside each tab
+      grid.closest('.tab-pane').querySelectorAll('.filter-btns button').forEach(button => {
+        button.addEventListener('click', function () {
+          grid.closest('.tab-pane').querySelector('.filter-btns .active').classList.remove('active');
+          this.classList.add('active');
+          let filterValue = this.getAttribute('data-filter');
+          iso.arrange({ filter: filterValue });
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

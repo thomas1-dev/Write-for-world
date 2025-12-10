@@ -41,6 +41,53 @@
   transition: 0.3s ease;
 }
 
+/* Base style for all social icons */
+.footer-social a {
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect: enlarge slightly */
+.footer-social a:hover {
+  transform: scale(1.2);
+}
+
+/* Individual platform colors */
+.footer-social a .bi-twitter:hover {
+  color: #1DA1F2; /* Twitter blue */
+}
+
+.footer-social a .bi-facebook:hover {
+  color: #1877F2; /* Facebook blue */
+}
+
+.footer-social a .bi-instagram:hover {
+  color: #E4405F; /* Instagram pink */
+}
+
+.footer-social a .bi-linkedin:hover {
+  color: #0A66C2; /* LinkedIn blue */
+}
+/* Quick Links styled as pill buttons */
+.footer-links a {
+  display: inline-block;
+  margin: 6px 0;
+  padding: 8px 16px;
+  border-radius: 50px;            /* pill shape */
+  background-color: rgba(255,255,255,0.1); /* subtle background */
+  color: #ffffff;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.footer-links a:hover {
+  background-color: #ffc107;      /* gold highlight */
+  color: #212529;                 /* dark text for contrast */
+  transform: translateY(-3px);    /* slight lift */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
 </style>
 </head>
 <body>
@@ -49,7 +96,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
   <div class="container">
     <a class="navbar-brand fw-bold" href="index.html">
-      <img src="images/ww1.jpg" alt="Write for World Logo" height="40" class="me-2">
+      <img src="images/ww1_result_result.webp" alt="Write for World Logo" height="40" class="me-2">
       Write for World
     </a>
    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -64,6 +111,8 @@
         <li class="nav-item"><a class="nav-link" href="about.html"><i class="bi bi-info-circle me-1"></i>About</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html"><i class="bi bi-envelope me-1"></i>Contact</a></li>
         <li class="nav-item ms-lg-3">
+          <li class="nav-item"><a class="nav-link" href="gallery.html"><i class="bi bi-images me-1"></i>Gallery</a>
+          </li>
           <a class="btn btn-warning text-dark fw-bold" href="donate.html"><i class="bi bi-envelope me-1"></i>Donate</a>
         </li>
       </ul>
@@ -156,7 +205,7 @@
         <!-- Program 1 -->
         <div class="col-md-4">
           <div class="card h-100 shadow-sm">
-            <img src="images/uploads/im1.jpg" class="card-img-top img-fixed" alt="Education Program">
+            <img src="images/im1_result_result.webp" class="card-img-top img-fixed" alt="Education Program">
             <div class="card-body text-center p-2">
               <h6 class="card-title fw-bold">Education & Skills</h6>
               <p class="card-text small">Providing access to quality education and vocational training for youth.</p>
@@ -167,7 +216,7 @@
         <!-- Program 2 -->
         <div class="col-md-4">
           <div class="card h-100 shadow-sm">
-            <img src="images/im3.jpg" class="card-img-top img-fixed" alt="Health Outreach">
+            <img src="images/im3_result_result.webp" class="card-img-top img-fixed" alt="Health Outreach">
             <div class="card-body text-center p-2">
               <h6 class="card-title fw-bold">Voices of Tomorrow</h6>
               <p class="card-text small">Teen members at Write for World’s Creative Writing Clinic sharing ideas and stories.
@@ -179,7 +228,7 @@
         <!-- Program 3 -->
         <div class="col-md-4">
           <div class="card h-100 shadow-sm">
-            <img src="images/im4.jpg" class="card-img-top img-fixed" alt="Climate Action">
+            <img src="images/im4_result_result.webp" class="card-img-top img-fixed" alt="Climate Action">
             <div class="card-body text-center p-2">
               <h6 class="card-title fw-bold">Empowering Teens Through Mentorship</h6>
               <p class="card-text small">A career coaching session at Write for World’s headquarters inspiring growth and opportunity.</p>
@@ -190,7 +239,7 @@
         <!-- Program 4 -->
         <div class="col-md-4">
           <div class="card h-100 shadow-sm">
-            <img src="images/im5.jpg" class="card-img-top img-fixed" alt="Community Project">
+            <img src="images/im5_result_result.webp" class="card-img-top img-fixed" alt="Community Project">
             <div class="card-body text-center p-2">
               <h6 class="card-title fw-bold">Extending a Hand of Care</h6>
               <p class="card-text small">Providing clothing materials to a rehabilitation centre to uplift and empower its members.</p>
@@ -201,7 +250,7 @@
         <!-- Program 5 -->
         <div class="col-md-4">
           <div class="card h-100 shadow-sm">
-            <img src="images/im6.jpg" class="card-img-top img-fixed" alt="Literacy Program">
+            <img src="images/im6_result_result.webp" class="card-img-top img-fixed" alt="Literacy Program">
             <div class="card-body text-center p-2">
               <h6 class="card-title fw-bold">Strengthening Partnerships with MDF Africa</h6>
               <p class="card-text small">A group photo taken following our focused discussion with MDF Africa officials.</p>
@@ -212,7 +261,7 @@
         <!-- Program 6 -->
         <div class="col-md-4">
           <div class="card h-100 shadow-sm">
-            <img src="images/im2.jpg" class="card-img-top img-fixed" alt="Youth Leadership">
+            <img src="images/Launching of writing competition .jpg" class="card-img-top img-fixed" alt="Youth Leadership">
             <div class="card-body text-center p-2">
               <h6 class="card-title fw-bold">Igniting Young Voices</h6>
               <p class="card-text small">A writing competition launched during our Creative Writing Clinic session to empower teens through expression.</p>
@@ -268,25 +317,26 @@
   <p><i class="bi bi-phone-fill me-2"></i> Mobile Phone: 0593032627</p>
 </div>
 
-      <!-- Quick Links -->
-      <div class="col-md-4 mb-3">
-        <h5 class="fw-bold">Quick Links</h5>
-        <ul class="list-unstyled">
-          <li><a href="index.html" class="text-white text-decoration-none"><i class="bi bi-house-door me-1"></i>Home</a></li>
-          <li><a href="about.html" class="text-white text-decoration-none"><i class="bi bi-info-circle me-2"></i> About</a></li>
-          <li><a href="program.html" class="text-white text-decoration-none"><i class="bi bi-journal-text me-2"></i> Programs</a></li>
-          <li><a href="donate.html" class="text-white text-decoration-none"><i class="bi bi-heart-fill me-2"></i> Donate</a></li>
-          <li><a href="contact.html" class="text-white text-decoration-none"><i class="bi bi-envelope me-2"></i> Contact</a></li>
-        </ul>
-      </div>
+        <!-- Quick Links -->
+      <div class="col-md-4 mb-3 footer-links">
+  <h5 class="fw-bold">Quick Links</h5>
+  <ul class="list-unstyled">
+    <li><a href="index.html"><i class="bi bi-house-door me-1"></i> Home</a></li>
+    <li><a href="about.html"><i class="bi bi-info-circle me-2"></i> About</a></li>
+    <li><a href="program.html"><i class="bi bi-journal-text me-2"></i> Programs</a></li>
+    <li><a href="donate.html"><i class="bi bi-heart-fill me-2"></i> Donate</a></li>
+    <li><a href="contact.html"><i class="bi bi-envelope me-2"></i> Contact</a></li>
+    <li><a  href="gallery.html"><i class="bi bi-images me-1"></i>Gallery</a>
+  </ul>
+</div>
 
       <!-- Social Media -->
-    <div class="col-md-4 mb-3">
+  <div class="col-md-4 mb-3 footer-social">
   <h5 class="fw-bold">Follow Us</h5>
-  <a href="https://twitter.com/Write4World" class="text-white me-3 fs-5" target="_blank" rel="noopener">
-    <i class="bi bi-twitter"></i>
+  <a href="https://x.com/Write4worldG?" class="text-white me-3 fs-5" target="_blank" rel="noopener">
+    <i class="bi bi-twitter-x"></i>
   </a>
-  <a href="https://facebook.com/write4worldgh" class="text-white me-3 fs-5" target="_blank" rel="noopener">
+  <a href="https://www.facebook.com/share/17ToMDU2Qe/" class="text-white me-3 fs-5" target="_blank" rel="noopener">
     <i class="bi bi-facebook"></i>
   </a>
   <a href="https://instagram.com/Write4Worldgh" class="text-white me-3 fs-5" target="_blank" rel="noopener">
